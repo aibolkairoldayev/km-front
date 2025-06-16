@@ -122,3 +122,50 @@
     display: none;
 }
 
+.main-item {
+    position: relative;
+    &:hover {
+        .main-item {
+            &__info {
+                transition:  0.5s linear;
+            }
+            &__icon {
+                opacity: 1;
+                top: 7px;
+                right: 7px;
+            }
+            &__more {
+                opacity: 1;
+            }
+        }
+    }
+    &__icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        opacity: 0;
+        -webkit-transition: .5s linear;
+        transition: .5s linear;
+    }
+    &__info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 102;
+        background: radial-gradient(234.69% 138.69% at 0.9% 2.98%, rgba(23, 83, 169, 0.60) 0%, rgba(23, 83, 169, 0.00) 100%);
+        backdrop-filter: blur(20px);
+        transition: 0.5s linear;
+        cursor: pointer;
+    }
+    &__more {
+        color: #FFF;
+        font-family: "Inter", sans-serif;
+        text-decoration-line: underline;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 128.571%; 
+        opacity: 0;
+    }
+}

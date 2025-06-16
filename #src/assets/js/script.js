@@ -1,16 +1,38 @@
 //preloader close
-$(document).ready(()=>{
-    $('.preloader').fadeOut('slow', function() {
-        $(this).remove();
-    });
+// $(document).ready(()=>{
+//     $('.preloader').fadeOut('slow', function() {
+//         $(this).remove();
+//     });
 
+// });
+
+// setTimeout(function() {
+//     $('.preloader').fadeOut('slow', function() {
+//         $(this).remove();
+//     });
+// }, 3000);
+
+function animateIntroItems() {
+  $('.intro__item').each(function(index) {
+    setTimeout(() => {
+      $(this).addClass('show');
+    }, index * 400); // каждая следующая с задержкой 400мс
+  });
+}
+
+function hidePreloaderAndAnimate() {
+  $('.preloader').fadeOut('slow', function() {
+    $(this).remove();
+    animateIntroItems(); // запуск анимации после удаления прелоудера
+  });
+}
+
+$(document).ready(() => {
+  // двойной вызов, чтобы гарантированно сработало:
+  hidePreloaderAndAnimate();
+  setTimeout(hidePreloaderAndAnimate, 3000);
 });
 
-setTimeout(function() {
-    $('.preloader').fadeOut('slow', function() {
-        $(this).remove();
-    });
-}, 3000);
 
 //scrollbar in docs main page
 $(function () {
@@ -58,3 +80,53 @@ $(function () {
   });
 });
 
+//header fixed func
+$(window).on('scroll', function () {
+  if ($(window).scrollTop() > 0) {
+    $('.header').addClass('fixed');
+  } else {
+    $('.header').removeClass('fixed');
+  }
+});
+
+//lang open/close
+$(document).ready(function() {
+  // Клик по текущему языку — переключение класса "актив" у блока с другими языками
+  $('.header__lang--current').on('click', function(e) {
+    e.stopPropagation();
+    $('.header__lang--other').toggleClass('active');
+  });
+
+  // Клик по элементу языка
+  $('.header__lang--item').on('click', function() {
+    // Проверяем, есть ли у кликнутого .header__lang--item класс active
+    if (!$(this).hasClass('active')) {
+      $('.header__lang--other').removeClass('active');
+    }
+  });
+
+  // Клик вне меню — закрытие, если оно открыто
+  if (!$(e.target).closest('.header__lang').length) {
+    $('.header__lang--other').removeClass('active');
+  }
+});
+
+//burger lang open/close
+$('.burger__lang--current').click(()=> {
+    $('.burger__lang--other').toggleClass('show')
+})
+
+//burger open/close
+function toggleBurger() {
+  $('.burger').toggleClass('open');
+  $('.burger__btn').toggleClass('open');
+    if ($('.burger').hasClass('open')) {
+      $('body').css('overflow', 'hidden');
+  } else {
+      $('body').css('overflow', '');
+  }
+}
+
+$('.burger__wrapper').click(()=> {
+  toggleBurger()
+})
