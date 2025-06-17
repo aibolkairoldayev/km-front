@@ -1,17 +1,4 @@
-//preloader close
-// $(document).ready(()=>{
-//     $('.preloader').fadeOut('slow', function() {
-//         $(this).remove();
-//     });
-
-// });
-
-// setTimeout(function() {
-//     $('.preloader').fadeOut('slow', function() {
-//         $(this).remove();
-//     });
-// }, 3000);
-
+//prelouder and main page animation
 function animateIntroItems() {
   $('.intro__item').each(function(index) {
     setTimeout(() => {
@@ -135,8 +122,67 @@ $('.burger__wrapper').click(()=> {
 var wholeWidth = $(window).width();
 var containerWidth = $('.container').width();
 var containerMargin = (wholeWidth - containerWidth) / 2;
-console.log(containerMargin)
 $('.history__title').css('margin-left', containerMargin + 'px');
 $('.history__slider').css('margin-left', containerMargin + 'px');
 $('.standart__title').css('margin-left', containerMargin + 'px');
 $('.standart__slider').css('margin-left', containerMargin + 'px');
+
+//video modal close/open
+if ($('.about__video').length) {
+    function openVideo() {
+        $('.about__video').addClass('show');
+        $('body').css('overflow', 'hidden');
+    }
+    function closeVideo() {
+        $('.about__video').removeClass('show');
+        $('body').css('overflow', 'unset');
+    }
+    $('.about__video--wrapper').click(()=> {
+        closeVideo()
+    })
+}
+
+//about page persons modal open/close
+$(document).ready(function () {
+  // Открытие модального окна
+  $('.corporate__item--info').on('click', function () {
+    const index = $('.corporate__item--info').index(this); // Получаем индекс кликнутого элемента
+
+    $('.modal2').addClass('show'); // Показываем модалку
+
+    // Активируем соответствующий modal2__item
+    $('.modal2__item').removeClass('active').eq(index).addClass('active');
+  });
+
+  // Закрытие модального окна при клике на modal2__close или modal2__wrapper
+  $('.modal2__close, .modal2__wrapper').on('click', function () {
+    $('.modal2').removeClass('show'); // Скрываем модалку
+    $('.modal2__item').removeClass('active'); // Убираем активный класс
+  });
+});
+
+//main tab links func
+$(document).ready(function () {
+  $('.tab-link').on('click', function (e) {
+    e.preventDefault();
+
+    const index = $('.tab-link').index(this); // индекс кликнутой табы
+    const target = $('.tab-destiny').eq(index); // соответствующий блок
+
+    if (target.length) {
+     let headerOffset;
+
+      if ($(window).width() > 768) {
+        headerOffset = 70;
+      } else {
+        headerOffset = 85;
+      }
+       // фиксированный отступ от верха
+      const targetPosition = target.offset().top - headerOffset;
+
+      $('html, body').animate({
+        scrollTop: targetPosition
+      }, 500); // 500 — скорость прокрутки в мс
+    }
+  });
+});

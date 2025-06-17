@@ -23,537 +23,786 @@
                 хризотил-асбеста и выработке хризотилового волокна.
             </div>
         </div>
-        <div class="banner2__play">
+        <div class="banner2__play" onClick="openVideo()">
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="72" viewBox="0 0 100 72" fill="none">
                 <rect width="100" height="72" rx="2" fill="#1753A9"/>
                 <path d="M69.0689 37.8157C70.6174 37.1005 70.6174 34.8995 69.0689 34.1843L38.3386 19.9906C37.0133 19.3785 35.5 20.3465 35.5 21.8063V50.1937C35.5 51.6535 37.0133 52.6215 38.3386 52.0094L69.0689 37.8157Z" fill="white"/>
             </svg>
         </div>
     </div>
-    <div class="main-tabs">
-        <div class="main-tabs__items">
-            <div class="main-tabs__item">Стратегия предприятия  </div>
-            <div class="main-tabs__item">История компании</div>
-            <div class="main-tabs__item">Награды</div>
-            <div class="main-tabs__item">Корпоративное упровление</div>
+    <div class="about__video">
+        <div class="about__video--wrapper"></div>
+        <div class="about__video--content">
+            <div class="about__video--close" onClick="closeVideo()">
+                <img src="assets/img/icons/close.svg" alt="icon">
+            </div>
+            <iframe  src="https://www.youtube.com/embed/7agKzPZMDvQ?si=lGAyAOYwq2BxSMfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
+    <div class="sticky__content">
+        <div class="main-tabs">
+            <div class="main-tabs__items">
+                <div class="main-tabs__item tab-link">Стратегия предприятия  </div>
+                <div class="main-tabs__item tab-link">История компании</div>
+                <div class="main-tabs__item tab-link">Награды</div>
+                <div class="main-tabs__item tab-link">Корпоративное упровление</div>
+            </div>
+        </div>
 
-    <section class="strategy">
-        <div class="container">
-            <div class="about__content">
-                <div class="about__left about__title">
-                    Стратегия предприятия  
-                </div>
-                <div class="about__right">
-                    <div class="strategy__title about__title">
-                        Стратегическая миссия АО «Костанайские минералы» до 2027 года
+        <section class="strategy tab-destiny">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__left about__title">
+                        Стратегия предприятия  
                     </div>
-                    <div class="about__info">
-                        <b>Наша миссия:</b>
-                        <p>
-                            Cтать лидером отрасли, обеспечивая устойчивый рост и эффективность производства. 
-                            Мы стремимся к тому, чтобы к 2027 году АО «Костанайские минералы» стало символом 
-                            качества и надежности в производстве хризотила.
-                        </p>
-                    </div>
-
-                    <div class="about__graph">
-                        <div class="about__graph--item">
-                            <b></b>
-                            <div class="about__graph--img">
-                                <img src="" alt="">
-                            </div>
+                    <div class="about__right">
+                        <div class="strategy__title about__title">
+                            Стратегическая миссия АО «Костанайские минералы» до 2027 года
                         </div>
-                    </div>
-
-                    <div class="goals">
-                    <div class="goals__title about__title">
-                        Качественные цели
-                    </div>
-                    <div class="goals__top">
-                        <div class="goals__item">
-                            <b>Лидерство по издержкам:</b>
+                        <div class="about__info">
+                            <b>Наша миссия:</b>
                             <p>
-                                Мы стремимся к оптимизации производственных процессов и снижению затрат, чтобы 
-                                обеспечить конкурентоспособность нашей продукции на мировом рынке.
+                                Cтать лидером отрасли, обеспечивая устойчивый рост и эффективность производства. 
+                                Мы стремимся к тому, чтобы к 2027 году АО «Костанайские минералы» стало символом 
+                                качества и надежности в производстве хризотила.
                             </p>
                         </div>
-                         <div class="goals__item">
-                            <b>Устойчивый успех:</b>
-                            <p>
-                                Мы нацелены на долгосрочное развитие компании, основанное на инновациях, 
-                                эффективности и ответственном подходе к ресурсам.
-                            </p>
+
+                        <div class="about__graph">
+                            <div class="about__graph--item">
+                                <b></b>
+                                <div class="about__graph--img">
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goals">
+                        <div class="goals__title about__title">
+                            Качественные цели
+                        </div>
+                        <div class="goals__top">
+                            <div class="goals__item">
+                                <b>Лидерство по издержкам:</b>
+                                <p>
+                                    Мы стремимся к оптимизации производственных процессов и снижению затрат, чтобы 
+                                    обеспечить конкурентоспособность нашей продукции на мировом рынке.
+                                </p>
+                            </div>
+                            <div class="goals__item">
+                                <b>Устойчивый успех:</b>
+                                <p>
+                                    Мы нацелены на долгосрочное развитие компании, основанное на инновациях, 
+                                    эффективности и ответственном подходе к ресурсам.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="goals__bot">
+                            <div class="goals__title2 about__title">
+                                Количественные цели:
+                            </div>
+                            <div class="goals__items">
+                                <div class="goals__item2">
+                                    <span>Объем производста хризотила:</span>
+                                    <div class="goals__item2--bot">
+                                        <b>300</b>
+                                        <div class="goals__item2--right">
+                                            <p>тысяч тонн</p>
+                                            <div class="goals__item2--number">к 2027 году</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="goals__item2">
+                                    <span>Контроль себестоимости:</span>
+                                    <div class="goals__item2--bot">
+                                        <b>+2%</b>
+                                        <div class="goals__item2--right">
+                                            <p>в год</p>
+                                            <div class="goals__item2--number">максимум</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="goals__item2">
+                                    <span>Высококачественный хризотил:</span>
+                                    <div class="goals__item2--bot">
+                                        <b>+20%</b>
+                                        <div class="goals__item2--right">
+                                            <p>увеличить долю</p>
+                                            <div class="goals__item2--number">3-4 группы</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="goals__item2">
+                                    <span>Производительность труда:</span>
+                                    <div class="goals__item2--bot">
+                                        <b>+30%</b>
+                                        <div class="goals__item2--right">
+                                            <p>к 2024 году</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="goals__item2">
+                                    <span>Диверсификация:</span>
+                                    <div class="goals__item2--bot">
+                                        <b>≥30%</b>
+                                        <div class="goals__item2--right">
+                                            <p>оборот</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="goals__item2">
+                                    <span>Рентабельность:</span>
+                                    <div class="goals__item2--bot">
+                                        <b>≥10%</b>
+                                        <div class="goals__item2--right">
+                                            <p>не менее</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="goals__bot">
-                        <div class="goals__title2 about__title">
-                            Количественные цели:
-                        </div>
-                        <div class="goals__items">
-                            <div class="goals__item2">
-                                <span>Объем производста хризотила:</span>
-                                <div class="goals__item2--bot">
-                                    <b>300</b>
-                                    <div class="goals__item2--right">
-                                        <p>тысяч тонн</p>
-                                        <div class="goals__item2--number">к 2027 году</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                             <div class="goals__item2">
-                                <span>Контроль себестоимости:</span>
-                                <div class="goals__item2--bot">
-                                    <b>+2%</b>
-                                    <div class="goals__item2--right">
-                                        <p>в год</p>
-                                        <div class="goals__item2--number">максимум</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                             <div class="goals__item2">
-                                <span>Высококачественный хризотил:</span>
-                                <div class="goals__item2--bot">
-                                    <b>+20%</b>
-                                    <div class="goals__item2--right">
-                                        <p>увеличить долю</p>
-                                        <div class="goals__item2--number">3-4 группы</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                             <div class="goals__item2">
-                                <span>Производительность труда:</span>
-                                <div class="goals__item2--bot">
-                                    <b>+30%</b>
-                                    <div class="goals__item2--right">
-                                        <p>к 2024 году</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                             <div class="goals__item2">
-                                <span>Диверсификация:</span>
-                                <div class="goals__item2--bot">
-                                    <b>≥30%</b>
-                                    <div class="goals__item2--right">
-                                        <p>оборот</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                             <div class="goals__item2">
-                                <span>Рентабельность:</span>
-                                <div class="goals__item2--bot">
-                                    <b>≥10%</b>
-                                    <div class="goals__item2--right">
-                                        <p>не менее</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
-                </div>
 
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="history tab-destiny">
+            <div class="history__title about__title">История компании</div>
+            <div class="history__slider">
+                <div class="history__item">
+                    <img src="assets/img/icons/line.svg" alt="line" class="history__line">
+                    <b>1915</b>
+                    <img src="assets/img/history.png" alt="img" class="history__img">
+                    <p>
+                        Первые сведения о геологии Джетыгаринского района упоминаются в сочинениях 1858 года 
+                        исследователей Южного Урала - Меглицкого и Антипова, где говорится о присутствии в разрезах 
+                        реки Шортанды серпентинитов, с которыми обычно связаны месторождения хризотил- асбеста.
+                    </p>
+                </div>
+                <div class="history__item">
+                    <img src="assets/img/icons/line.svg" alt="line" class="history__line">
+                    <b>1915</b>
+                    <img src="assets/img/history.png" alt="img" class="history__img">
+                    <p>
+                        В 1915 году геолог Вознесенский В.А. указал на наличие в серпентинитах по правому берегу 
+                        р.Шортанды многочисленных жилок асбеста.
+                    </p>
+                </div>
+                <div class="history__item">
+                    <img src="assets/img/icons/line.svg" alt="line" class="history__line">
+                    <b>1915</b>
+                    <img src="assets/img/history.png" alt="img" class="history__img">
+                    <p>
+                        В 1915 году геолог Вознесенский В.А. указал на наличие в серпентинитах по правому берегу 
+                        р.Шортанды многочисленных жилок асбеста.
+                    </p>
+                </div>
+                <div class="history__item">
+                    <img src="assets/img/icons/line.svg" alt="line" class="history__line">
+                    <b>1915</b>
+                    <img src="assets/img/history.png" alt="img" class="history__img">
+                    <p>
+                        В 1915 году геолог Вознесенский В.А. указал на наличие в серпентинитах по правому берегу 
+                        р.Шортанды многочисленных жилок асбеста.
+                    </p>
+                </div>
+                <div class="history__item">
+                    <img src="assets/img/icons/line.svg" alt="line" class="history__line">
+                    <b>1915</b>
+                    <img src="assets/img/history.png" alt="img" class="history__img">
+                    <p>
+                        В 1915 году геолог Вознесенский В.А. указал на наличие в серпентинитах по правому берегу 
+                        р.Шортанды многочисленных жилок асбеста.
+                    </p>
+                </div>
+                <div class="history__item">
+                    <img src="assets/img/icons/line.svg" alt="line" class="history__line">
+                    <b>1915</b>
+                    <img src="assets/img/history.png" alt="img" class="history__img">
+                    <p>
+                        В 1915 году геолог Вознесенский В.А. указал на наличие в серпентинитах по правому берегу 
+                        р.Шортанды многочисленных жилок асбеста.
+                    </p>
+                </div>
                 
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="history">
-        <div class="history__title about__title">История компании</div>
-        <div class="history__slider">
-            <div class="history__item">
-                <img src="assets/img/icons/line.svg" alt="line" class="history__line">
-                <b>1915</b>
-                <img src="assets/img/history.png" alt="img" class="history__img">
-                <p>
-                    Первые сведения о геологии Джетыгаринского района упоминаются в сочинениях 1858 года 
-                    исследователей Южного Урала - Меглицкого и Антипова, где говорится о присутствии в разрезах 
-                    реки Шортанды серпентинитов, с которыми обычно связаны месторождения хризотил- асбеста.
-                </p>
-            </div>
-            <div class="history__item">
-                <img src="assets/img/icons/line.svg" alt="line" class="history__line">
-                <b>1915</b>
-                <img src="assets/img/history.png" alt="img" class="history__img">
-                <p>
-                    В 1915 году геолог Вознесенский В.А. указал на наличие в серпентинитах по правому берегу 
-                    р.Шортанды многочисленных жилок асбеста.
-                </p>
-            </div>
-            <div class="history__item">
-                <img src="assets/img/icons/line.svg" alt="line" class="history__line">
-                <b>1915</b>
-                <img src="assets/img/history.png" alt="img" class="history__img">
-                <p>
-                    В 1915 году геолог Вознесенский В.А. указал на наличие в серпентинитах по правому берегу 
-                    р.Шортанды многочисленных жилок асбеста.
-                </p>
-            </div>
-            <div class="history__item">
-                <img src="assets/img/icons/line.svg" alt="line" class="history__line">
-                <b>1915</b>
-                <img src="assets/img/history.png" alt="img" class="history__img">
-                <p>
-                    В 1915 году геолог Вознесенский В.А. указал на наличие в серпентинитах по правому берегу 
-                    р.Шортанды многочисленных жилок асбеста.
-                </p>
-            </div>
-            <div class="history__item">
-                <img src="assets/img/icons/line.svg" alt="line" class="history__line">
-                <b>1915</b>
-                <img src="assets/img/history.png" alt="img" class="history__img">
-                <p>
-                    В 1915 году геолог Вознесенский В.А. указал на наличие в серпентинитах по правому берегу 
-                    р.Шортанды многочисленных жилок асбеста.
-                </p>
-            </div>
-            <div class="history__item">
-                <img src="assets/img/icons/line.svg" alt="line" class="history__line">
-                <b>1915</b>
-                <img src="assets/img/history.png" alt="img" class="history__img">
-                <p>
-                    В 1915 году геолог Вознесенский В.А. указал на наличие в серпентинитах по правому берегу 
-                    р.Шортанды многочисленных жилок асбеста.
-                </p>
-            </div>
-            
-        </div>
-    </section>
+        <section class="awards tab-destiny">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__left about__title">Международные награды</div>
+                    <div class="about__right">
+                        <div class="awards__items">
+                            <div class="awards__item">
+                                <div class="awards__img">
+                                    <picture>
+                                        <img src="assets/img/award.png" alt="award">
+                                    </picture>
+                                </div>
 
-    <section class="awards">
-        <div class="container">
-            <div class="about__content">
-                <div class="about__left about__title">Международные награды</div>
-                <div class="about__right">
-                    <div class="awards__items">
-                        <div class="awards__item">
-                            <div class="awards__img">
-                                <picture>
-                                    <img src="assets/img/award.png" alt="award">
-                                </picture>
+                                <div class="awards__info">
+                                    <b>«Золотая Звезда»</b>
+                                    <span>20 ноября 1995 года</span>
+                                    <p>
+                                        ОАО «Кустанайасбест» была присуждена международная награда «Золотая Звезда» 
+                                        за качество производимого асбеста. Вручение награды происходило в г. 
+                                        Мадриде, Испания.
+                                    </p>
+                                </div>
                             </div>
 
-                            <div class="awards__info">
-                                <b>«Золотая Звезда»</b>
-                                <span>20 ноября 1995 года</span>
-                                <p>
-                                    ОАО «Кустанайасбест» была присуждена международная награда «Золотая Звезда» 
-                                    за качество производимого асбеста. Вручение награды происходило в г. 
-                                    Мадриде, Испания.
-                                </p>
+                            <div class="awards__item">
+                                <div class="awards__img">
+                                    <picture>
+                                        <img src="assets/img/award.png" alt="award">
+                                    </picture>
+                                </div>
+
+                                <div class="awards__info">
+                                    <b>«Золотой глобус»</b>
+                                    <span>20 ноября 1995 года</span>
+                                    <p>
+                                        В 1996 году- наша организация удостоилась чести быть награжденной 
+                                        международным призом «Золотой глобус» за конкурентную и качественную 
+                                        продукцию, а также за участие в развитии экономики Казахстана. Вручение 
+                                        происходило в Копенгагене, Дания.
+                                    </p>
+                                </div>
                             </div>
+
+                            <div class="awards__item">
+                                <div class="awards__img">
+                                    <picture>
+                                        <img src="assets/img/award.png" alt="award">
+                                    </picture>
+                                </div>
+
+                                <div class="awards__info">
+                                    <b>«Арка Европы»</b>
+                                    <span>В апреле 1997 года</span>
+                                    <p>
+                                        На Международной Конвенции Европейской Арки, которая проходила в Мадриде, 
+                                        ОАО «Кустанайасбест» был награжден призом Арка Европы за качество и 
+                                        совершенство продукции.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="awards__item">
+                                <div class="awards__img">
+                                    <picture>
+                                        <img src="assets/img/award.png" alt="award">
+                                    </picture>
+                                </div>
+
+                                <div class="awards__info">
+                                    <b>«Лидер Отрасли»</b>
+                                    <span>В 2003 году</span>
+                                    <p>
+                                        Учредительным Советом «АДМ Бизнес Консалтинг» г.Москва АО «Костанайские 
+                                        минералы» награждено почетным призом «Лидер Отрасли» за значительный вклад 
+                                        в развитие отрасли.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="awards__item">
+                                <div class="awards__img">
+                                    <picture>
+                                        <img src="assets/img/award.png" alt="award">
+                                    </picture>
+                                </div>
+
+                                <div class="awards__info">
+                                    <b>«Арка Европы»</b>
+                                    <span>В апреле 1997 года</span>
+                                    <p>
+                                        На Международной Конвенции Европейской Арки, которая проходила в Мадриде, 
+                                        ОАО «Кустанайасбест» был награжден призом Арка Европы за качество и 
+                                        совершенство продукции.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="awards__item">
+                                <div class="awards__img">
+                                    <picture>
+                                        <img src="assets/img/award.png" alt="award">
+                                    </picture>
+                                </div>
+
+                                <div class="awards__info">
+                                    <b>«Лидер Отрасли»</b>
+                                    <span>В 2003 году</span>
+                                    <p>
+                                        Учредительным Советом «АДМ Бизнес Консалтинг» г.Москва АО «Костанайские 
+                                        минералы» награждено почетным призом «Лидер Отрасли» за значительный вклад 
+                                        в развитие отрасли.
+                                    </p>
+                                </div>
+                            </div>
+                        
                         </div>
+                    </div>
+                </div>
+                <div class="about__content">
+                    <div class="about__left about__title">Государственные награды</div>
+                    <div class="about__right">
+                        <div class="awards__items">
+                            <div class="awards__item">
+                                <div class="awards__img">
+                                    <picture>
+                                        <img src="assets/img/award.png" alt="award">
+                                    </picture>
+                                </div>
 
-                        <div class="awards__item">
-                            <div class="awards__img">
-                                <picture>
-                                    <img src="assets/img/award.png" alt="award">
-                                </picture>
+                                <div class="awards__info">
+                                    <b>«Золотая Звезда»</b>
+                                    <span>20 ноября 1995 года</span>
+                                    <p>
+                                        ОАО «Кустанайасбест» была присуждена международная награда «Золотая Звезда» 
+                                        за качество производимого асбеста. Вручение награды происходило в г. 
+                                        Мадриде, Испания.
+                                    </p>
+                                </div>
                             </div>
 
-                            <div class="awards__info">
-                                <b>«Золотой глобус»</b>
-                                <span>20 ноября 1995 года</span>
-                                <p>
-                                    В 1996 году- наша организация удостоилась чести быть награжденной 
-                                    международным призом «Золотой глобус» за конкурентную и качественную 
-                                    продукцию, а также за участие в развитии экономики Казахстана. Вручение 
-                                    происходило в Копенгагене, Дания.
-                                </p>
+                            <div class="awards__item">
+                                <div class="awards__img">
+                                    <picture>
+                                        <img src="assets/img/award.png" alt="award">
+                                    </picture>
+                                </div>
+
+                                <div class="awards__info">
+                                    <b>«Золотой глобус»</b>
+                                    <span>20 ноября 1995 года</span>
+                                    <p>
+                                        В 1996 году- наша организация удостоилась чести быть награжденной 
+                                        международным призом «Золотой глобус» за конкурентную и качественную 
+                                        продукцию, а также за участие в развитии экономики Казахстана. Вручение 
+                                        происходило в Копенгагене, Дания.
+                                    </p>
+                                </div>
                             </div>
+
+                            <div class="awards__item">
+                                <div class="awards__img">
+                                    <picture>
+                                        <img src="assets/img/award.png" alt="award">
+                                    </picture>
+                                </div>
+
+                                <div class="awards__info">
+                                    <b>«Арка Европы»</b>
+                                    <span>В апреле 1997 года</span>
+                                    <p>
+                                        На Международной Конвенции Европейской Арки, которая проходила в Мадриде, 
+                                        ОАО «Кустанайасбест» был награжден призом Арка Европы за качество и 
+                                        совершенство продукции.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="awards__item">
+                                <div class="awards__img">
+                                    <picture>
+                                        <img src="assets/img/award.png" alt="award">
+                                    </picture>
+                                </div>
+
+                                <div class="awards__info">
+                                    <b>«Лидер Отрасли»</b>
+                                    <span>В 2003 году</span>
+                                    <p>
+                                        Учредительным Советом «АДМ Бизнес Консалтинг» г.Москва АО «Костанайские 
+                                        минералы» награждено почетным призом «Лидер Отрасли» за значительный вклад 
+                                        в развитие отрасли.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="awards__item">
+                                <div class="awards__img">
+                                    <picture>
+                                        <img src="assets/img/award.png" alt="award">
+                                    </picture>
+                                </div>
+
+                                <div class="awards__info">
+                                    <b>«Арка Европы»</b>
+                                    <span>В апреле 1997 года</span>
+                                    <p>
+                                        На Международной Конвенции Европейской Арки, которая проходила в Мадриде, 
+                                        ОАО «Кустанайасбест» был награжден призом Арка Европы за качество и 
+                                        совершенство продукции.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="awards__item">
+                                <div class="awards__img">
+                                    <picture>
+                                        <img src="assets/img/award.png" alt="award">
+                                    </picture>
+                                </div>
+
+                                <div class="awards__info">
+                                    <b>«Лидер Отрасли»</b>
+                                    <span>В 2003 году</span>
+                                    <p>
+                                        Учредительным Советом «АДМ Бизнес Консалтинг» г.Москва АО «Костанайские 
+                                        минералы» награждено почетным призом «Лидер Отрасли» за значительный вклад 
+                                        в развитие отрасли.
+                                    </p>
+                                </div>
+                            </div>
+                        
                         </div>
-
-                        <div class="awards__item">
-                            <div class="awards__img">
-                                <picture>
-                                    <img src="assets/img/award.png" alt="award">
-                                </picture>
-                            </div>
-
-                            <div class="awards__info">
-                                <b>«Арка Европы»</b>
-                                <span>В апреле 1997 года</span>
-                                <p>
-                                    На Международной Конвенции Европейской Арки, которая проходила в Мадриде, 
-                                    ОАО «Кустанайасбест» был награжден призом Арка Европы за качество и 
-                                    совершенство продукции.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="awards__item">
-                            <div class="awards__img">
-                                <picture>
-                                    <img src="assets/img/award.png" alt="award">
-                                </picture>
-                            </div>
-
-                            <div class="awards__info">
-                                <b>«Лидер Отрасли»</b>
-                                <span>В 2003 году</span>
-                                <p>
-                                    Учредительным Советом «АДМ Бизнес Консалтинг» г.Москва АО «Костанайские 
-                                    минералы» награждено почетным призом «Лидер Отрасли» за значительный вклад 
-                                    в развитие отрасли.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="awards__item">
-                            <div class="awards__img">
-                                <picture>
-                                    <img src="assets/img/award.png" alt="award">
-                                </picture>
-                            </div>
-
-                            <div class="awards__info">
-                                <b>«Арка Европы»</b>
-                                <span>В апреле 1997 года</span>
-                                <p>
-                                    На Международной Конвенции Европейской Арки, которая проходила в Мадриде, 
-                                    ОАО «Кустанайасбест» был награжден призом Арка Европы за качество и 
-                                    совершенство продукции.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="awards__item">
-                            <div class="awards__img">
-                                <picture>
-                                    <img src="assets/img/award.png" alt="award">
-                                </picture>
-                            </div>
-
-                            <div class="awards__info">
-                                <b>«Лидер Отрасли»</b>
-                                <span>В 2003 году</span>
-                                <p>
-                                    Учредительным Советом «АДМ Бизнес Консалтинг» г.Москва АО «Костанайские 
-                                    минералы» награждено почетным призом «Лидер Отрасли» за значительный вклад 
-                                    в развитие отрасли.
-                                </p>
-                            </div>
-                        </div>
-                    
                     </div>
                 </div>
             </div>
-             <div class="about__content">
-                <div class="about__left about__title">Государственные награды</div>
-                <div class="about__right">
-                    <div class="awards__items">
-                        <div class="awards__item">
-                            <div class="awards__img">
-                                <picture>
-                                    <img src="assets/img/award.png" alt="award">
-                                </picture>
-                            </div>
+        </section>
 
-                            <div class="awards__info">
-                                <b>«Золотая Звезда»</b>
-                                <span>20 ноября 1995 года</span>
-                                <p>
-                                    ОАО «Кустанайасбест» была присуждена международная награда «Золотая Звезда» 
-                                    за качество производимого асбеста. Вручение награды происходило в г. 
-                                    Мадриде, Испания.
-                                </p>
-                            </div>
+        <section class="standart">
+            <div class="standart__title about__title">Стандарты Качества</div>
+            <div class="standart__slider">
+                <a href="assets/img/standart.png" class="standart__item" data-fancybox="doc2">
+                    <img src="assets/img/standart.png" alt="standart">
+                </a>
+                <a href="assets/img/standart.png" class="standart__item" data-fancybox="doc2">
+                    <img src="assets/img/standart.png" alt="standart">
+                </a>
+                <a href="assets/img/standart.png" class="standart__item" data-fancybox="doc2">
+                    <img src="assets/img/standart.png" alt="standart">
+                </a>
+                <a href="assets/img/standart.png" class="standart__item" data-fancybox="doc2">
+                    <img src="assets/img/standart.png" alt="standart">
+                </a>
+                <a href="assets/img/standart.png" class="standart__item" data-fancybox="doc2">
+                    <img src="assets/img/standart.png" alt="standart">
+                </a>
+                <a href="assets/img/standart.png" class="standart__item" data-fancybox="doc2">
+                    <img src="assets/img/standart.png" alt="standart">
+                </a>
+            </div>
+        </section>
+
+        <section class="corporate tab-destiny">
+            <div class="container">
+                <div class="corporate__title about__title">Корпоративное управление</div>
+                <div class="corporate__items">
+                    <div class="corporate__item main-item wbg">
+                        <div class="corporate__item--img wbg__bg">
+                            <picture>
+                                <img src="assets/img/corporate1.png" alt="img">
+                            </picture>
                         </div>
 
-                        <div class="awards__item">
-                            <div class="awards__img">
-                                <picture>
-                                    <img src="assets/img/award.png" alt="award">
-                                </picture>
-                            </div>
+                        <div class="corporate__item--info main-item__info">
+                            <img src="assets/img/icons/more.svg" alt="icon" class="corporate__item--icon main-item__icon">
+                            <b>Нуркожаев Ербол Сапарбаевич</b>
+                            <p>Председатель правления</p>
+                            <span class="main-item__more">Читать подробнее</span>
+                        </div>
+                    </div>
 
-                            <div class="awards__info">
-                                <b>«Золотой глобус»</b>
-                                <span>20 ноября 1995 года</span>
-                                <p>
-                                    В 1996 году- наша организация удостоилась чести быть награжденной 
-                                    международным призом «Золотой глобус» за конкурентную и качественную 
-                                    продукцию, а также за участие в развитии экономики Казахстана. Вручение 
-                                    происходило в Копенгагене, Дания.
-                                </p>
-                            </div>
+                    <div class="corporate__item main-item wbg">
+                        <div class="corporate__item--img wbg__bg">
+                            <picture>
+                                <img src="assets/img/corporate2.png" alt="img">
+                            </picture>
                         </div>
 
-                        <div class="awards__item">
-                            <div class="awards__img">
-                                <picture>
-                                    <img src="assets/img/award.png" alt="award">
-                                </picture>
-                            </div>
+                        <div class="corporate__item--info main-item__info">
+                            <img src="assets/img/icons/more.svg" alt="icon" class="corporate__item--icon main-item__icon">
+                            <b>Смагулов Айбол Рахимгалиевич</b>
+                            <p>Технический директор</p>
+                            <span class="main-item__more">Читать подробнее</span>
+                        </div>
+                    </div>
 
-                            <div class="awards__info">
-                                <b>«Арка Европы»</b>
-                                <span>В апреле 1997 года</span>
-                                <p>
-                                    На Международной Конвенции Европейской Арки, которая проходила в Мадриде, 
-                                    ОАО «Кустанайасбест» был награжден призом Арка Европы за качество и 
-                                    совершенство продукции.
-                                </p>
-                            </div>
+                    <div class="corporate__item main-item wbg">
+                        <div class="corporate__item--img wbg__bg">
+                            <picture>
+                                <img src="assets/img/corporate3.png" alt="img">
+                            </picture>
                         </div>
 
-                        <div class="awards__item">
-                            <div class="awards__img">
-                                <picture>
-                                    <img src="assets/img/award.png" alt="award">
-                                </picture>
-                            </div>
+                        <div class="corporate__item--info main-item__info">
+                            <img src="assets/img/icons/more.svg" alt="icon" class="corporate__item--icon main-item__icon">
+                            <b>Абушев Чингиз Абразахавоич</b>
+                            <p>Коммерческий директор</p>
+                            <span class="main-item__more">Читать подробнее</span>
+                        </div>
+                    </div>
 
-                            <div class="awards__info">
-                                <b>«Лидер Отрасли»</b>
-                                <span>В 2003 году</span>
-                                <p>
-                                    Учредительным Советом «АДМ Бизнес Консалтинг» г.Москва АО «Костанайские 
-                                    минералы» награждено почетным призом «Лидер Отрасли» за значительный вклад 
-                                    в развитие отрасли.
-                                </p>
-                            </div>
+                    <div class="corporate__item main-item wbg">
+                        <div class="corporate__item--img wbg__bg">
+                            <picture>
+                                <img src="assets/img/corporate4.png" alt="img">
+                            </picture>
                         </div>
 
-                        <div class="awards__item">
-                            <div class="awards__img">
-                                <picture>
-                                    <img src="assets/img/award.png" alt="award">
-                                </picture>
-                            </div>
-
-                            <div class="awards__info">
-                                <b>«Арка Европы»</b>
-                                <span>В апреле 1997 года</span>
-                                <p>
-                                    На Международной Конвенции Европейской Арки, которая проходила в Мадриде, 
-                                    ОАО «Кустанайасбест» был награжден призом Арка Европы за качество и 
-                                    совершенство продукции.
-                                </p>
-                            </div>
+                        <div class="corporate__item--info main-item__info">
+                            <img src="assets/img/icons/more.svg" alt="icon" class="corporate__item--icon main-item__icon">
+                            <b>Орумбаев Исламбек Нуртаевич</b>
+                            <p>Финансовый директор</p>
+                            <span class="main-item__more">Читать подробнее</span>
                         </div>
-
-                        <div class="awards__item">
-                            <div class="awards__img">
-                                <picture>
-                                    <img src="assets/img/award.png" alt="award">
-                                </picture>
-                            </div>
-
-                            <div class="awards__info">
-                                <b>«Лидер Отрасли»</b>
-                                <span>В 2003 году</span>
-                                <p>
-                                    Учредительным Советом «АДМ Бизнес Консалтинг» г.Москва АО «Костанайские 
-                                    минералы» награждено почетным призом «Лидер Отрасли» за значительный вклад 
-                                    в развитие отрасли.
-                                </p>
-                            </div>
-                        </div>
-                    
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div> 
 
-    <section class="standart">
-        <div class="standart__title about__title">Стандарты Качества</div>
-        <div class="standart__slider">
-            <a href="assets/img/standart.png" class="standart__item" data-fancybox="doc2">
-                <img src="assets/img/standart.png" alt="standart">
-            </a>
-            <a href="assets/img/standart.png" class="standart__item" data-fancybox="doc2">
-                <img src="assets/img/standart.png" alt="standart">
-            </a>
-            <a href="assets/img/standart.png" class="standart__item" data-fancybox="doc2">
-                <img src="assets/img/standart.png" alt="standart">
-            </a>
-            <a href="assets/img/standart.png" class="standart__item" data-fancybox="doc2">
-                <img src="assets/img/standart.png" alt="standart">
-            </a>
-            <a href="assets/img/standart.png" class="standart__item" data-fancybox="doc2">
-                <img src="assets/img/standart.png" alt="standart">
-            </a>
-            <a href="assets/img/standart.png" class="standart__item" data-fancybox="doc2">
-                <img src="assets/img/standart.png" alt="standart">
-            </a>
-        </div>
-    </section>
-
-    <section class="corporate">
-        <div class="container">
-            <div class="corporate__title about__title">Корпоративное управление</div>
-            <div class="corporate__items">
-                <div class="corporate__item main-item wbg">
-                    <div class="corporate__item--img wbg__bg">
+    <div class="modal2 main-modal">
+        <div class="modal2__wrapper main-modal__wrapper"></div>
+        <div class="modal2__content main-modal__content">
+            <div class="modal2__close">
+                <img src="assets/img/icons/close.svg" alt="close">
+            </div>
+            <div class="modal2__items">
+                <div class="modal2__item active">
+                    <div class="modal2__img">
                         <picture>
-                            <img src="assets/img/corporate1.png" alt="img">
+                            <img src="assets/img/corporate1.png" alt="person">
                         </picture>
                     </div>
 
-                    <a href="" class="corporate__item--info main-item__info">
-                        <img src="assets/img/icons/more.svg" alt="icon" class="corporate__item--icon main-item__icon">
-                        <b>Нуркожаев Ербол Сапарбаевич</b>
-                        <p>Председатель правления</p>
-                        <span class="main-item__more">Читать подробнее</span>
-                    </a>
-                </div>
+                    <div class="modal2__info">
+                        <div class="modal2__top">
+                            <b>Нурхожаев Ербол Сапарбаевич</b>
+                            <p>Председатель правления</p>
+                            <span>Родился в 1973 году.</span>
+                        </div>
+                        <div class="modal2__text">
+                            <div class="modal2__text--elem">
+                                <b>Образование</b>
+                                <p>
+                                    Является выпускником Государственной академии управления (г. Москва), 
+                                    где получил квалификацию «Менеджер». <br> В марте 2008 года окончил Академию 
+                                    народного хозяйства при Правительстве Российской Федерации (г. Москва), 
+                                    где освоил образовательную программу «MBA: Менеджмент – Международный 
+                                    бизнес». <br> Программа имеет международный статус, подтверждённый 
+                                    аккредитацией Ассоциации MBA (AMBA, Великобритания). <br> По итогам обучения 
+                                    была присвоена дополнительная квалификация — Мастер делового 
+                                    администрирования (MBA).
+                                </p>
+                            </div>
+                                <div class="modal2__text--elem">
+                                <b>Профессиональный опыт</b>
+                                <ul>
+                                    <li>
+                                        В 2002 году начал трудовую деятельность в АО «Костанайские минералы»
+                                            на должности заместителя коммерческого директора по снабжению.
+                                    </li>
+                                    <li>
+                                        В 2006 году назначен Заместителем Председателя Правления – 
+                                        коммерческим директором АО «Костанайские минералы».
+                                    </li>
+                                    <li>
+                                        В январе 2012 года занял должность исполнительного директора 
+                                        компании.
+                                    </li>
+                                    <li>
+                                        С 26 ноября 2012 года по настоящее время — Председатель Правления 
+                                        АО «Костанайские минералы».
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
-                <div class="corporate__item main-item wbg">
-                    <div class="corporate__item--img wbg__bg">
+                        <a href="" class="modal2__link">
+                            <img src="assets/img/icons/world.svg" alt="icon">
+                            <p>Ссылка на личный сайт</p>
+                        </a>
+                    </div>
+                </div>        
+                <div class="modal2__item">
+                    <div class="modal2__img">
                         <picture>
-                            <img src="assets/img/corporate2.png" alt="img">
+                            <img src="assets/img/corporate2.png" alt="person">
                         </picture>
                     </div>
 
-                    <a href="" class="corporate__item--info main-item__info">
-                        <img src="assets/img/icons/more.svg" alt="icon" class="corporate__item--icon main-item__icon">
-                        <b>Смагулов Айбол Рахимгалиевич</b>
-                        <p>Технический директор</p>
-                        <span class="main-item__more">Читать подробнее</span>
-                    </a>
-                </div>
+                    <div class="modal2__info">
+                        <div class="modal2__top">
+                            <b>Смагулов Айбол Рахимгалиевич</b>
+                            <p>Технический директор</p>
+                            <span>Родился в 1976 году.</span>
+                        </div>
+                        <div class="modal2__text">
+                            <div class="modal2__text--elem">
+                                <b>Образование</b>
+                                <p>
+                                    Является выпускником Государственной академии управления (г. Москва), 
+                                    где получил квалификацию «Менеджер». <br> В марте 2008 года окончил Академию 
+                                    народного хозяйства при Правительстве Российской Федерации (г. Москва), 
+                                    где освоил образовательную программу «MBA: Менеджмент – Международный 
+                                    бизнес». <br> Программа имеет международный статус, подтверждённый 
+                                    аккредитацией Ассоциации MBA (AMBA, Великобритания). <br> По итогам обучения 
+                                    была присвоена дополнительная квалификация — Мастер делового 
+                                    администрирования (MBA).
+                                </p>
+                            </div>
+                                <div class="modal2__text--elem">
+                                <b>Профессиональный опыт</b>
+                                <ul>
+                                    <li>
+                                        В 2002 году начал трудовую деятельность в АО «Костанайские минералы»
+                                            на должности заместителя коммерческого директора по снабжению.
+                                    </li>
+                                    <li>
+                                        В 2006 году назначен Заместителем Председателя Правления – 
+                                        коммерческим директором АО «Костанайские минералы».
+                                    </li>
+                                    <li>
+                                        В январе 2012 года занял должность исполнительного директора 
+                                        компании.
+                                    </li>
+                                    <li>
+                                        С 26 ноября 2012 года по настоящее время — Председатель Правления 
+                                        АО «Костанайские минералы».
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
-                <div class="corporate__item main-item wbg">
-                    <div class="corporate__item--img wbg__bg">
+                        <a href="" class="modal2__link">
+                            <img src="assets/img/icons/world.svg" alt="icon">
+                            <p>Ссылка на личный сайт</p>
+                        </a>
+                    </div>
+                </div>   
+
+                <div class="modal2__item">
+                    <div class="modal2__img">
                         <picture>
-                            <img src="assets/img/corporate3.png" alt="img">
+                            <img src="assets/img/corporate3.png" alt="person">
                         </picture>
                     </div>
 
-                    <a href="" class="corporate__item--info main-item__info">
-                        <img src="assets/img/icons/more.svg" alt="icon" class="corporate__item--icon main-item__icon">
-                        <b>Абушев Чингиз Абразахавоич</b>
-                        <p>Коммерческий директор</p>
-                        <span class="main-item__more">Читать подробнее</span>
-                    </a>
-                </div>
+                    <div class="modal2__info">
+                        <div class="modal2__top">
+                            <b>Абушев Чингиз Абразахавоич</b>
+                            <p>Коммерческий директор</p>
+                            <span>Родился в 1996 году.</span>
+                        </div>
+                        <div class="modal2__text">
+                            <div class="modal2__text--elem">
+                                <b>Образование</b>
+                                <p>
+                                    Является выпускником Государственной академии управления (г. Москва), 
+                                    где получил квалификацию «Менеджер». <br> В марте 2008 года окончил Академию 
+                                    народного хозяйства при Правительстве Российской Федерации (г. Москва), 
+                                    где освоил образовательную программу «MBA: Менеджмент – Международный 
+                                    бизнес». <br> Программа имеет международный статус, подтверждённый 
+                                    аккредитацией Ассоциации MBA (AMBA, Великобритания). <br> По итогам обучения 
+                                    была присвоена дополнительная квалификация — Мастер делового 
+                                    администрирования (MBA).
+                                </p>
+                            </div>
+                                <div class="modal2__text--elem">
+                                <b>Профессиональный опыт</b>
+                                <ul>
+                                    <li>
+                                        В 2002 году начал трудовую деятельность в АО «Костанайские минералы»
+                                            на должности заместителя коммерческого директора по снабжению.
+                                    </li>
+                                    <li>
+                                        В 2006 году назначен Заместителем Председателя Правления – 
+                                        коммерческим директором АО «Костанайские минералы».
+                                    </li>
+                                    <li>
+                                        В январе 2012 года занял должность исполнительного директора 
+                                        компании.
+                                    </li>
+                                    <li>
+                                        С 26 ноября 2012 года по настоящее время — Председатель Правления 
+                                        АО «Костанайские минералы».
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
-                <div class="corporate__item main-item wbg">
-                    <div class="corporate__item--img wbg__bg">
+                        <a href="" class="modal2__link">
+                            <img src="assets/img/icons/world.svg" alt="icon">
+                            <p>Ссылка на личный сайт</p>
+                        </a>
+                    </div>
+                </div>
+                        
+                <div class="modal2__item">
+                    <div class="modal2__img">
                         <picture>
-                            <img src="assets/img/corporate4.png" alt="img">
+                            <img src="assets/img/corporate3.png" alt="person">
                         </picture>
                     </div>
 
-                    <a href="" class="corporate__item--info main-item__info">
-                        <img src="assets/img/icons/more.svg" alt="icon" class="corporate__item--icon main-item__icon">
-                        <b>Орумбаев Исламбек Нуртаевич</b>
-                        <p>Финансовый директор</p>
-                        <span class="main-item__more">Читать подробнее</span>
-                    </a>
+                    <div class="modal2__info">
+                            <div class="modal2__top">
+                                <b>Орумбаев Исламбек Нуртаевич</b>
+                                <p>Финансовый директор</p>
+                                <span>Родился в 1986 году.</span>
+                            </div>
+                            <div class="modal2__text">
+                                <div class="modal2__text--elem">
+                                    <b>Образование</b>
+                                    <p>
+                                        Является выпускником Государственной академии управления (г. Москва), 
+                                        где получил квалификацию «Менеджер». <br> В марте 2008 года окончил Академию 
+                                        народного хозяйства при Правительстве Российской Федерации (г. Москва), 
+                                        где освоил образовательную программу «MBA: Менеджмент – Международный 
+                                        бизнес». <br> Программа имеет международный статус, подтверждённый 
+                                        аккредитацией Ассоциации MBA (AMBA, Великобритания). <br> По итогам обучения 
+                                        была присвоена дополнительная квалификация — Мастер делового 
+                                        администрирования (MBA).
+                                    </p>
+                                </div>
+                                    <div class="modal2__text--elem">
+                                    <b>Профессиональный опыт</b>
+                                    <ul>
+                                        <li>
+                                            В 2002 году начал трудовую деятельность в АО «Костанайские минералы»
+                                                на должности заместителя коммерческого директора по снабжению.
+                                        </li>
+                                        <li>
+                                            В 2006 году назначен Заместителем Председателя Правления – 
+                                            коммерческим директором АО «Костанайские минералы».
+                                        </li>
+                                        <li>
+                                            В январе 2012 года занял должность исполнительного директора 
+                                            компании.
+                                        </li>
+                                        <li>
+                                            С 26 ноября 2012 года по настоящее время — Председатель Правления 
+                                            АО «Костанайские минералы».
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <a href="" class="modal2__link">
+                                <img src="assets/img/icons/world.svg" alt="icon">
+                                <p>Ссылка на личный сайт</p>
+                            </a>
+                        </div>
                 </div>
             </div>
+
         </div>
-    </section>
+    </div>
 
     <section class="news">
         <div class="news__bg1 news__bg">
@@ -579,7 +828,7 @@
                                 <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0.5)"/>
                                 </clipPath>
                             </defs>
-                            </svg>
+                        </svg>
                     </a>
                 </div>
 
@@ -631,18 +880,18 @@
                 </div>
 
                 <a href="news.html" class="news__btn news__btn--mob">
-                        <span>Смотреть все новости</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                            <g clip-path="url(#clip0_1106_5167)">
-                                <path d="M8.24928 8.24439L12.8775 12.7857L8.34633 17.4239L9.77115 18.8189L15.7074 12.7558L9.6443 6.81957L8.24928 8.24439Z" fill="white"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_1106_5167">
-                                <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0.5)"/>
-                                </clipPath>
-                            </defs>
-                            </svg>
-                    </a>
+                    <span>Смотреть все новости</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <g clip-path="url(#clip0_1106_5167)">
+                            <path d="M8.24928 8.24439L12.8775 12.7857L8.34633 17.4239L9.77115 18.8189L15.7074 12.7558L9.6443 6.81957L8.24928 8.24439Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1106_5167">
+                            <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0.5)"/>
+                            </clipPath>
+                        </defs>
+                        </svg>
+                </a>
             </div>
         </div>
     </section>

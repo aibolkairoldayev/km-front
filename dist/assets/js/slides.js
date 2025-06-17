@@ -7,6 +7,18 @@ $('.history__slider').slick({
     arrows: false,
     responsive: [
         {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3.4,
+            }
+        },
+         {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2.4,
+            }
+        },
+        {
             breakpoint: 576,
             settings: {
                 slidesToShow: 1.1,
@@ -24,6 +36,18 @@ $('.standart__slider').slick({
     dots: false,
     arrows: false,
     responsive: [
+         {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3.1,
+            }
+        },
+         {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2.1,
+            }
+        },
         {
             breakpoint: 576,
             settings: {
@@ -34,26 +58,25 @@ $('.standart__slider').slick({
     ],
 });
 
-//stones slider in labrory page
-if($(window).width() < 992) {
-    $('.stones__items').slick({
-        slidesToShow: 6,
+//about page persons
+if($(window).width() < 1200) {
+    $('.corporate__items').slick({
+        slidesToShow: 3,
         slidesToScroll: 1,
         infinite: false,
         dots: false,
         arrows: false,
         responsive: [           
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
-                    slidesToShow: 5,
+                    slidesToShow: 2,
                 }
             },
             {
                 breakpoint: 576,
                 settings: {
-                    slidesToShow: 4.3,
-                    slidesToScroll: 1,
+                    slidesToShow: 1.2,
                 }
             },
         ],
