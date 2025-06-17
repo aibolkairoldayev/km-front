@@ -169,3 +169,125 @@
         opacity: 0;
     }
 }
+
+.main-banner {
+    height: 440px;
+    position: relative;
+    z-index: 100;
+    &::after {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 102;
+        content: "";
+        position: absolute;
+        background: linear-gradient(to right, 
+  rgba(7, 48, 110, 0.88) 0%, 
+  rgba(7, 48, 110, 0.99), 
+  rgba(7, 49, 110, 0) 100%);
+    }
+    
+    &__left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 101;
+        img {
+            height: 100%;
+        }
+    }
+    &__right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 101;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+    .container {
+        position: relative;
+        z-index: 104;
+        width: 100%;
+        height: 100%;
+        padding-top: 94px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__text {
+        max-width: 630px;
+        color: #FFF;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+.breads {
+    display: flex;
+    align-items: center;
+    a {
+        color: #FFF;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; 
+    }
+    span {
+        margin: 0 7px;
+        color: #FFF;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;    
+    }
+    p {
+        color: #FFF;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+    }
+}
+
+.main-title {
+    margin: 20px 0;
+    color: #FFF;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.864px;
+    text-transform: uppercase;
+}
+
+.main-tabs {
+    background-color: #171717;
+    height: 40px;
+    &__items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    &__item {
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 128.571%;
+        margin: 0 18px;
+    }
+}

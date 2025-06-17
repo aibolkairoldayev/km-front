@@ -1230,12 +1230,17 @@
 }
 
 @media (max-width: 768px) {
+  .banner {
+    height: 800px;
+  }
+
   .banner__title p {
     font-size: 35px;
   }
 
   .banner__title {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
+    margin-top: 40px;
   }
 
   .banner__bot {
@@ -1272,10 +1277,6 @@
 }
 
 @media (max-width: 576px) {
-  .banner {
-    height: 780px;
-  }
-
   .banner__title p {
     font-size: 32px;
   }

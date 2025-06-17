@@ -130,3 +130,13 @@ function toggleBurger() {
 $('.burger__wrapper').click(()=> {
   toggleBurger()
 })
+
+//container left margin
+var wholeWidth = $(window).width();
+var containerWidth = $('.container').width();
+var containerMargin = (wholeWidth - containerWidth) / 2;
+console.log(containerMargin)
+$('.history__title').css('margin-left', containerMargin + 'px');
+$('.history__slider').css('margin-left', containerMargin + 'px');
+$('.standart__title').css('margin-left', containerMargin + 'px');
+$('.standart__slider').css('margin-left', containerMargin + 'px');

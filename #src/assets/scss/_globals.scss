@@ -6,7 +6,7 @@ body {
   margin: 0; 
   font-family: "IBM Plex Mono", monospace;
   font-family: "Oswald", sans-serif;
-  background: #fff;
+  background-color: #001636;
   font-size: 16px;
   font-style: normal;
   &.hidden {
@@ -17,11 +17,6 @@ body {
 }  
 }
 
-.main {
-  @media (max-width: 768px) {
-    padding-top: 71px;
-  }
-}
 
 .preloader {
   position: fixed;

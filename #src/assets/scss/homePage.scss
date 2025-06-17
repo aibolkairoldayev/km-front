@@ -1,7 +1,7 @@
 .banner {
     height: 700px;
-     @media(max-width: 576px) {
-        height: 780px;
+     @media(max-width: 768px) {
+        height: 800px;
      }
     &__content {
         height: 100%;
@@ -38,7 +38,8 @@
         
         margin-bottom: 120px;
         @media(max-width: 768px) {
-            margin-bottom: 70px;
+            margin-bottom: 40px;
+            margin-top: 40px;
         }
     }
     &__bot {
@@ -60,6 +61,7 @@
                 width: 100%;
                 margin-bottom: 10px;
             }
+            
             &:hover {
                 cursor: pointer;
                 background: rgba(0, 0, 0, .32);
