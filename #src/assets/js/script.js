@@ -186,3 +186,26 @@ $(document).ready(function () {
     }
   });
 });
+
+//news page tabs func
+$(document).on('click', '.news2__tab', function () {
+  const selectedCat = $(this).data('cat');
+
+  // 1. Активируем нужный таб
+  $('.news2__tab').removeClass('active');
+  $(this).addClass('active');
+
+  // 2. Показываем / скрываем элементы в зависимости от выбранного data-cat
+  if (selectedCat === 'all') {
+    $('.news2__item').addClass('active');
+  } else {
+    $('.news2__item').each(function () {
+      const itemCat = $(this).data('item');
+      if (itemCat === selectedCat) {
+        $(this).addClass('active');
+      } else {
+        $(this).removeClass('active');
+      }
+    });
+  }
+});
