@@ -835,6 +835,7 @@ body::-webkit-scrollbar {
   font-weight: 400;
   line-height: 128.571%;
   margin: 0 18px;
+  cursor: pointer;
 }
 
 .main-modal {
@@ -860,6 +861,66 @@ body::-webkit-scrollbar {
 .main-modal__content {
   position: absolute;
   z-index: 402;
+}
+
+.otherprod {
+  padding: 70px 0;
+}
+
+.otherprod__title {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.otherprod__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.otherprod__item {
+  height: 290px;
+  width: calc(33% - 11px);
+}
+
+.otherprod__item:hover .otherprod__item--img img {
+  opacity: 1;
+}
+
+.otherprod__item:hover .otherprod__item--info {
+  height: 120px;
+}
+
+.otherprod__item--img img {
+  opacity: 0.7;
+}
+
+.otherprod__item--info {
+  height: 80px;
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.otherprod__item--info b {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
 }
 
 @media (max-width: 1400px) {
@@ -920,6 +981,16 @@ body::-webkit-scrollbar {
   .main-tabs {
     top: 78px;
   }
+
+  .otherprod__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .otherprod__item {
+    width: 100%;
+    margin-bottom: 16px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -931,8 +1002,12 @@ body::-webkit-scrollbar {
     max-width: 560px;
   }
 
+  .main-banner.no-right .main-banner__right {
+    display: none;
+  }
+
   .main-banner {
-    height: 580px;
+    height: 400px;
   }
 
   .main-banner::after {
@@ -964,6 +1039,14 @@ body::-webkit-scrollbar {
   .main-title {
     font-size: 50px;
     margin: 12px 0;
+  }
+
+  .otherprod {
+    padding: 40px 0;
+  }
+
+  .otherprod__item--info {
+    height: auto;
   }
 }
 
@@ -998,12 +1081,20 @@ body::-webkit-scrollbar {
     display: block;
   }
 
+  .main-banner {
+    height: 320px;
+  }
+
   .main-title {
     font-size: 40px;
   }
 
   .main-tabs {
     display: none;
+  }
+
+  .otherprod__item {
+    height: 310px;
   }
 }
 

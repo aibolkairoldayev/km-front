@@ -174,8 +174,18 @@
     height: 440px;
     position: relative;
     z-index: 100;
+    &.no-right {
+        @media(max-width: 768px) {
+            .main-banner__right {
+                display: none;
+            }
+        }
+    }
     @media(max-width: 768px) {
-        height: 580px;
+        height: 400px;
+    }
+    @media(max-width: 576px) {
+        height: 320px;
     }
     &::after {
         width: 100%;
@@ -333,6 +343,7 @@
         font-weight: 400;
         line-height: 128.571%;
         margin: 0 18px;
+        cursor: pointer;
     }
 }
 
@@ -356,5 +367,72 @@
     &__content {
         position: absolute;
         z-index: 402;
+    }
+}
+
+.otherprod {
+    padding: 70px 0;
+    @media(max-width: 768px) {
+        padding: 40px 0;
+    }
+    &__title {
+        color: #FFF;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 16px;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: 992px) {
+            flex-wrap: wrap;
+        }
+    }
+    &__item {
+        height: 290px;
+        width: calc(33% - 11px);
+        @media(max-width: 992px) {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+        @media(max-width: 576px) {
+            height: 310px;
+        }
+        &:hover {
+            .otherprod {
+                &__item {
+                    &--img {
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                    &--info {
+                        height: 120px;
+                    }
+                }
+            }
+        }
+        &--img {
+            img {
+                opacity: 0.7;
+            }
+        }
+        &--info {
+            height: 80px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @media(max-width: 768px) {
+                height: auto;
+            }
+            b {
+                color: #FFF;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
     }
 }
