@@ -209,3 +209,21 @@ $(document).on('click', '.news2__tab', function () {
     });
   }
 });
+
+
+//asfalt page video play
+$(document).ready(function () {
+    $('.asfalt__video--cover svg').on('click', function () {
+        const $cover = $(this).closest('.asfalt__video--cover');
+        const $videoContainer = $cover.closest('.asfalt__video');
+        const $iframe = $videoContainer.find('iframe');
+        const src = $iframe.attr('src');
+
+        // Убираем обложку
+        $cover.addClass('hide');
+
+        // Перезапускаем iframe с autoplay
+        const autoplaySrc = src.includes('autoplay=1') ? src : src + (src.includes('?') ? '&' : '?') + 'autoplay=1';
+        $iframe.attr('src', autoplaySrc);
+    });
+});

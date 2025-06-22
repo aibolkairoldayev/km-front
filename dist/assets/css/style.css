@@ -1085,6 +1085,23 @@ body::-webkit-scrollbar {
     height: 320px;
   }
 
+  .breads {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .breads a {
+    margin-bottom: 7px;
+  }
+
+  .breads span {
+    margin-bottom: 7px;
+  }
+
+  .breads p {
+    margin-bottom: 7px;
+  }
+
   .main-title {
     font-size: 40px;
   }
