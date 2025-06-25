@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/svg+xml" href="./assets/img/icons/logo3.svg">
+  <link rel="stylesheet" href="./assets/css/style.min.css">
+  <link rel="stylesheet" href="./assets/css/depense.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./assets/css/homePage.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./assets/css/backend.min.css">
+  
+  <!-- fonts start -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <!-- fonts start -->
+   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print"
+    onload="this.media='all'" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css" media="screen" />
+  <!-- Fallback that only gets inserted when JavaScript is disabled, in which case we can't load CSS asynchronously. -->
+  <noscript>
+    <link rel="stylesheet" href="./assets/css/depense.min.css">
+    <link rel="stylesheet" href="./assets/css/homePage.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </noscript>
+  <title>KM</title>
+</head>
+<body class="body">
+
+<header class="header">
+    <div class="container">
+        <a href="/" class="header__logo">
+            <img src="assets/img/icons/logo1.svg" alt="logo">
+        </a>
+        <nav class="header__nav">
+            <ul>
+                <li>
+                    <a href="about.html">О компании</a>
+                </li>
+                <li>
+                    <a href="products.html">Продукции</a>
+                </li>
+                <li>
+                    <a href="manafac.html">Производство</a>
+                </li>
+                <li>
+                    <a href="development.html"> Устойчивое развитие</a>
+                </li>
+                <li>
+                    <a href="news.html">Новости</a>
+                </li>
+                <li>
+                    <a href="career.html">Карьера</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__lang">
+            <div class="header__lang--current">
+                <b>Русский</b>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M9.83333 16.6875C9.375 16.6875 8.98264 16.5208 8.65625 16.1875C8.32986 15.8542 8.16667 15.4583 8.16667 15C8.16667 14.5417 8.32986 14.1493 8.65625 13.8229C8.98264 13.4965 9.375 13.3333 9.83333 13.3333L10.3333 12.8542C10.4444 12.7431 10.5729 12.6562 10.7187 12.5937C10.8646 12.5312 11.0139 12.5 11.1667 12.5C11.4861 12.5 11.7604 12.6181 11.9896 12.8542C12.2187 13.0903 12.3333 13.3681 12.3333 13.6875V14.0417C12.3333 14.3194 12.4236 14.5486 12.6042 14.7292C12.7847 14.9097 13.0139 15 13.2917 15C13.5 15 13.6875 14.9375 13.8542 14.8125C14.0208 14.6875 14.1389 14.5278 14.2083 14.3333L14.4583 13.6458C14.5833 13.3125 14.7847 13.0382 15.0625 12.8229C15.3403 12.6076 15.6597 12.5 16.0208 12.5C16.1736 12.1111 16.2951 11.7083 16.3854 11.2917C16.4757 10.875 16.5208 10.4444 16.5208 10C16.5208 8.76389 16.2118 7.63541 15.5937 6.61458C14.9757 5.59375 14.1667 4.79166 13.1667 4.20833V5C13.1667 5.45833 13.0035 5.85069 12.6771 6.17708C12.3507 6.50347 11.9583 6.66666 11.5 6.66666H10.6667V8.33333C10.6667 8.56944 10.5868 8.76736 10.4271 8.92708C10.2674 9.0868 10.0694 9.16666 9.83333 9.16666H9V10.5833C9 10.8889 8.89583 11.1458 8.6875 11.3542C8.47917 11.5625 8.22222 11.6667 7.91667 11.6667C7.72222 11.6667 7.54514 11.625 7.38542 11.5417C7.22569 11.4583 7.09722 11.3403 7 11.1875L5.66667 9.16666H4.83333V10C4.83333 10.4306 4.6875 10.7986 4.39583 11.1042C4.10417 11.4097 3.75694 11.5903 3.35417 11.6458C3.71528 13.0903 4.49653 14.2917 5.69792 15.25C6.89931 16.2083 8.27778 16.6875 9.83333 16.6875ZM11.5 11.6667C11.2639 11.6667 11.066 11.5868 10.9062 11.4271C10.7465 11.2674 10.6667 11.0694 10.6667 10.8333C10.6667 10.5972 10.7465 10.3993 10.9062 10.2396C11.066 10.0799 11.2639 10 11.5 10H12.3333C12.5694 10 12.7674 10.0799 12.9271 10.2396C13.0868 10.3993 13.1667 10.5972 13.1667 10.8333C13.1667 11.0694 13.0868 11.2674 12.9271 11.4271C12.7674 11.5868 12.5694 11.6667 12.3333 11.6667H11.5ZM13.4375 9.16666C13.1597 9.16666 12.941 9.05902 12.7812 8.84375C12.6215 8.62847 12.5833 8.38889 12.6667 8.125L12.9792 7.20833C13.0347 7.04166 13.1319 6.90972 13.2708 6.8125C13.4097 6.71527 13.5625 6.66666 13.7292 6.66666C14.0069 6.66666 14.2257 6.7743 14.3854 6.98958C14.5451 7.20486 14.5833 7.44444 14.5 7.70833L14.1875 8.625C14.1319 8.79166 14.0347 8.92361 13.8958 9.02083C13.7569 9.11805 13.6042 9.16666 13.4375 9.16666ZM9.83333 18.3333C8.68056 18.3333 7.59722 18.1146 6.58333 17.6771C5.56944 17.2396 4.6875 16.6458 3.9375 15.8958C3.1875 15.1458 2.59375 14.2639 2.15625 13.25C1.71875 12.2361 1.5 11.1528 1.5 10C1.5 8.84722 1.71875 7.76389 2.15625 6.75C2.59375 5.73611 3.1875 4.85416 3.9375 4.10416C4.6875 3.35416 5.56944 2.76041 6.58333 2.32291C7.59722 1.88541 8.68056 1.66666 9.83333 1.66666C10.9861 1.66666 12.0694 1.88541 13.0833 2.32291C14.0972 2.76041 14.9792 3.35416 15.7292 4.10416C16.4792 4.85416 17.0729 5.73611 17.5104 6.75C17.9479 7.76389 18.1667 8.84722 18.1667 10C18.1667 11.1528 17.9479 12.2361 17.5104 13.25C17.0729 14.2639 16.4792 15.1458 15.7292 15.8958C14.9792 16.6458 14.0972 17.2396 13.0833 17.6771C12.0694 18.1146 10.9861 18.3333 9.83333 18.3333Z" fill="white"/>
+                </svg>
+            </div>
+            <div class="header__lang--other">
+                <a href="" class="header__lang--item active">
+                    <img src="assets/img/icons/rus.svg" alt="lang"> 
+                    <b>Русский</b>
+                </a>
+                <a href="" class="header__lang--item">
+                    <img src="assets/img/icons/kaz.svg" alt="lang"> 
+                    <b>Қазақша</b>
+                </a>
+                <a href="" class="header__lang--item">
+                    <img src="assets/img/icons/eng.svg" alt="lang"> 
+                    <b>English</b>
+                </a>
+            </div>
+        </div>
+
+        <div class="burger__btn" onClick="toggleBurger()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+<div class="burger">
+    <div class="burger__wrapper"></div>
+    <div class="burger__content">
+        <div class="burger__top">
+            <ul class="burger__nav">
+                <li>
+                    <a href="about.html">О компании</a>
+                </li>
+                <li>
+                    <a href="products.html">Продукции</a>
+                </li>
+                <li>
+                    <a href="manafac.html">Производство</a>
+                </li>
+                <li>
+                    <a href="development.html"> Устойчивое развитие</a>
+                </li>
+                <li>
+                    <a href="news.html">Новости</a>
+                </li>
+                <li>
+                    <a href="career.html">Карьера</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+
+            <div class="burger__lang">
+                <div class="burger__lang--current">
+                    <b>язык сайта:</b>
+                    <p>RU</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                        <path d="M4.27051 6.33331C4.30097 6.33358 4.33101 6.33721 4.36035 6.34308L4.44531 6.36847C4.4727 6.37965 4.49879 6.39296 4.52246 6.40851L4.58691 6.46027L4.59277 6.46613L7.66699 9.388L8.01074 9.71515L8.35547 9.388L11.4229 6.47198C11.5031 6.39847 11.616 6.3538 11.7373 6.3548C11.8282 6.35561 11.9133 6.38253 11.9834 6.42706L12.0488 6.47687C12.1072 6.53231 12.1432 6.59989 12.1582 6.66925L12.166 6.73859C12.1669 6.83117 12.1299 6.92559 12.0547 7.00031L8.32617 10.5443C8.24666 10.6198 8.13357 10.6653 8.01074 10.6653C7.91882 10.6652 7.83267 10.6399 7.76172 10.595L7.69531 10.5443L3.96191 6.9964H3.96289L3.95605 6.99054L3.90234 6.93097L3.86426 6.86456C3.85403 6.84193 3.84604 6.81874 3.84082 6.79523L3.83301 6.72394C3.83279 6.69995 3.83501 6.67546 3.83984 6.65167L3.86133 6.58234C3.87113 6.55957 3.88366 6.53709 3.89844 6.51593L3.95117 6.45538C3.97088 6.43669 3.99278 6.41967 4.0166 6.4046L4.09375 6.36554C4.12125 6.35485 4.15029 6.34652 4.17969 6.34113L4.27051 6.33331Z" stroke="white"/>
+                    </svg>
+                </div>
+                <div class="burger__lang--other">
+                    <a href="">KZ</a>
+                    <a href="">EN</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="burger__bot">
+            <span>© km.kz</span>
+            <a href="https://i-marketing.kz/" class="burger__made">
+                <img src="assets/img/icons/imark.svg" alt="made">
+            </a>
+        </div>
+    </div>
+</div> 
+<main class="main developPage">
+    <div class="banner3 main-banner no-right">
+        <div class="main-banner__left">
+            <picture>
+                <img src="assets/img/mainbanner.png" alt="banner1">
+            </picture>
+        </div>
+        <div class="main-banner__right">
+            
+            <picture>
+                <img src="assets/img/safety.png" alt="banner2">
+            </picture>
+        </div>
+        <div class="container">
+            <div class="breads">
+                <a href="/">Главная </a>
+                <span>/</span>               
+                <p>Устойчивое развитие</p>
+            </div>
+            <div class="main-title">УСТОЙЧИВОЕ РАЗВИТИЕ</div>
+            <div class="main-banner__text">
+                Самый важный и ценный актив компании – наши люди, самоотверженно работающие над реализацией 
+                стратегических планов.
+            </div>
+        </div>
+    </div>
+
+    <div class="sticky__content">
+        <div class="main-tabs">
+            <div class="main-tabs__items">
+                <div class="main-tabs__item tab-link">Ответственность</div>
+                <div class="main-tabs__item tab-link">Экологическая ответственность  </div>
+                <div class="main-tabs__item tab-link">Социальное развитие</div>
+                <div class="main-tabs__item tab-link">Корпоративное управление</div>
+            </div>
+        </div>
+
+        <section class="respon tab-destiny">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__left about__title">Ответственность как основа развития</div>
+                    <div class="about__right">
+                        <div class="respon__speach">
+                            <img src="assets/img/icons/qus.svg" alt="icon">
+                            <span>Руководство АО “Костанайские минералы”.</span>
+                            <b>
+                                «В АО «Костанайские Минералы» мы рассматриваем ESG как ключевую часть 
+                                корпоративного управления и стратегического планирования. Устойчивость для 
+                                нас — это не только соблюдение стандартов, но и последовательный подход к 
+                                развитию, основанный на эффективности, прозрачности и уважении к среде, в 
+                                которой мы работаем.
+                            </b>
+                            <b>
+                                Мы стремимся выстраивать бизнес, который сохраняет баланс между экономическими 
+                                целями, социальной стабильностью и бережным отношением к окружающей среде».
+                            </b>
+                        </div>
+
+                        <div class="respon__mid">
+                            <div class="respon__item">
+                                <b>Наша миссия</b>
+                                <ul>
+                                    <li>
+                                        Обращать энергию природного минерала хризотил-асбеста во благо 
+                                        прогресса и человека.
+                                    </li>
+                                    <li>
+                                        Вносить позитивный вклад в социально-экономическое развитие страны, 
+                                        следовать принципам экологической и социальной ответственности, 
+                                        обеспечивать производственную безопасность, совершенствовать 
+                                        корпоративное управление.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="respon__item">
+                                <b>Наше видение</b>
+                                <p>
+                                    Мы стремимся быть надёжным и ответственным производителем, соответствующим 
+                                    современным требованиям устойчивого развития. Внедрение ESG-принципов — 
+                                    часть нашей долгосрочной стратегии и практической повседневной работы на 
+                                    всех уровнях.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="respon__bot">
+                            <div class="respon__bot--title">Подход к устойчивому развитию</div>
+                            <div class="respon__bot--items">
+                                <div class="respon__bot--item">
+                                    <b>Экологическая ответ-ость</b>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Снижение воздействия на окружающую среду
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Развитие энергоэффективных решений
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Внедрение экологически безопасных технологий
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Повторное использование ресурсов
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="respon__bot--item">
+                                    <b>Социальная вовлечённость</b>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Безопасные условия труда
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Развитие персонала</p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Поддержка локальных сообществ</p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Уважение к правам человека</p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Снижение социального неравенства</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="respon__bot--item">
+                                    <b>Корпоративное управление</b>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Прозрачность в принятии решений</p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Управление рисками</p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Соблюдение деловой этики
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Внутренний контроль
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Антикоррупционная практика
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="respon__bot--item">
+                                    <b>Цели устойчивого развития АО «Костанайские Минералы»</b>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Сокращение воздействия на окружающую среду
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Повышение эффективности использования ресурсов
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Высокие стандарты промышленной безопасности и охраны труда
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Сохранение здоровья персонала
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Обеспечение достойных условий труда
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Этическое ведение бизнеса и антикоррупционные стандарты
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Открытый диалог с обществом и сотрудниками
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Эффективная система корпоративного управления
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Вклад в социально-экономическое развитие страны
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>
+                                                Экономическая устойчивость и развитие
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="respon__bot--text">
+                                ESG — это часть того, как мы управляем компанией и строим устойчивые решения, 
+                                учитывая интересы всех сторон: сотрудников, партнёров, общества и окружающей 
+                                среды.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="eco tab-destiny">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__left about__title">Экологическая ответственность   </div>
+                    <div class="about__right">
+                        <div class="eco__speach">
+                            <img src="assets/img/icons/qus.svg" alt="icon">
+                            <span>Руководство АО “Костанайские минералы”.</span>
+                            <p>
+                                «Мы обеспечиваем качество жизни, здоровья и окружающей среды для настоящих и 
+                                будущих поколений.  Ответственность за сохранение природной среды является 
+                                одним из основополагающих принципов деятельности «Костанайские минералы».
+                            </p>
+                        </div>
+
+                        <div class="eco__mid">
+                            <img src="assets/img/eco.png" alt="eco">
+                            <div class="eco__text">
+                                <p> 
+                                    Мы вносим вклад в устойчивое развитие региона, соблюдая природоохранное 
+                                    законодательство, рационально используя ресурсы и постоянно совершенствуя 
+                                    экологическую деятельность. 
+                                </p>
+                                <p>
+                                    На предприятии действует система экологического менеджмента по СТ РК ISO 
+                                    14001-2016.
+                                </p>
+                                <p>
+                                    Экологические намерения отражены в Политике в области качества 
+                                    и охраны окружающей среды.
+                                </p>
+                                <p>
+                                    Воздействие производства на окружающую среду анализируется на всех этапах, 
+                                    а экологические аспекты учитываются при управленческих решениях.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="directs">
+                <div class="container">
+                    <div class="directs__content">
+                        <b>KM – GREEN Ecosystem 2020-2025гг</b>
+                        <div class="directs__text">Основные направления</div>
+                        <div class="directs__items">
+                            <div class="directs__item">
+                                <img src="assets/img/icons/direct1.svg" alt="icon">
+                                <p>Охрана воздушного бассейна </p>
+                            </div>
+                            <div class="directs__item">
+                                <img src="assets/img/icons/direct2.svg" alt="icon">
+                                <p>Охрана водных ресурсов</p>
+                            </div>
+                            <div class="directs__item">
+                                <img src="assets/img/icons/direct3.svg" alt="icon">
+                                <p>Минимизация отходов</p>
+                            </div>
+                            <div class="directs__item">
+                                <img src="assets/img/icons/direct4.svg" alt="icon">
+                                <p>Экология города</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="map2">
+                <div class="container">
+                    <div class="map2__content">
+                        <img src="assets/img/map2.png" alt="map">
+                        <div class="map2__left">
+                            <b>2021-2024</b>
+                            <p>География озеленения:</p>
+                            <ul>
+                                <li>
+                                    Территория города Житикара
+                                </li>
+                                <li>
+                                    Промышленная зона предприятия
+                                </li>
+                                <li>
+                                    Граница санитарно-защитной зоны.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="map2__mid map2__cont">
+                            <b>5500</b>
+                            <p>Высажено саженцев</p>
+                        </div>
+
+                        <div class="map2__right map2__cont">
+                            <b>13,7 млн тенге.</b>
+                            <p>Общая сумма</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="social tab-destiny">
+                <div class="about__content">
+                    <div class="about__left about__title">Социальное развитие</div>
+                    <div class="about__right">
+                        <div class="eco__speach">
+                            <img src="assets/img/icons/qus.svg" alt="icon">
+                            <span>Руководство АО “Костанайские минералы”.</span>
+                            <p>
+                                «Понимая социальную ответственность крупного бизнеса, АО «Костанайские 
+                                Минералы» стабильно и целенаправленно вкладывает немалые средства в 
+                                благоустройство и развитие города Житикары, участвует в подготовке и проведении 
+                                всех общегородских и районных мероприятий».
+                            </p>
+                        </div>
+
+                        <div class="eco__mid">
+                            <img src="assets/img/social2.png" alt="eco">
+                            <div class="eco__text">
+                                <p> 
+                                    Хризотил, или "горный лён", — основа стабильности Житикаринского региона.
+                                </p>
+                                <p>
+                                    Уже более 60 лет АО «Костанайские минералы» остаётся градообразующим 
+                                    предприятием и активно участвует в развитии города.
+                                </p>
+                                <p>
+                                    Мы осознаём ответственность перед сотрудниками, их семьями и жителями 
+                                    региона. Предприятие поддерживает социальные инициативы, реализует проекты 
+                                    в сфере КСО, направленные на повышение качества жизни.
+                                </p>
+                                <p>
+                                    Компания инвестирует в здравоохранение, образование и популяризацию ЗОЖ.
+                                </p>
+                                <p>
+                                    Ежегодно подписывается Меморандум об участии в социально-экономическом 
+                                    развитии Житикаринского района, в рамках которого выделяются средства на 
+                                    реализацию региональной программы развития.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="social__bot">
+                            Только за последние пятнадцать лет благодаря АО «КМ» в городе были построены и восстановлены важные 
+                            социальные объекты:
+                        </div>
+
+                        <div class="social__marks">
+                            <div class="social__marks--item">
+                                <img src="assets/img/icons/mark1.svg" alt="mark">
+                                <span>Культура и духовность</span>
+                            </div>
+                            <div class="social__marks--item">
+                                <img src="assets/img/icons/mark2.svg" alt="mark">
+                                <span>Общественные пространства</span>
+                            </div>
+                            <div class="social__marks--item">
+                                <img src="assets/img/icons/mark3.svg" alt="mark">
+                                <span>Спорт и здоровье</span>
+                            </div>
+                            <div class="social__marks--item">
+                                <img src="assets/img/icons/mark4.svg" alt="mark">
+                                <span>Социальная инфраструктура</span>
+                            </div>
+                            <div class="social__marks--item">
+                                <img src="assets/img/icons/mark5.svg" alt="mark">
+                                <span>Память</span>
+                            </div>
+                        </div>
+
+                        <div class="social__map">
+                            <img class="social__map--bg" src="assets/img/map3.png" alt="map">
+                            <div class="social__info">
+                                <img src="assets/img/mosqie.png" alt="mosqie">
+                                <div class="social__info--text">Мечеть им. Е.Татишева</div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="managment">
+                <div class="about__content">
+                    <div class="about__title about__left">Корпоративное управление</div>
+                    <div class="about__right">
+                        <div class="eco__speach social__speach2">
+                            <img src="assets/img/icons/qus.svg" alt="icon">
+                            <span>Руководство АО “Костанайские минералы”.</span>
+                            <p>
+                                «Самый важный и ценный актив компании – наши люди, самоотверженно работающие над реализацией 
+                                стратегических планов. Трудовой коллектив АО «Костанайские минералы» – это сплоченная команда 
+                                единомышленников, нацеленная всегда на результат и развитие. Мы ценим в своих сотрудниках стремление к 
+                                достижению результата, готовность работать в команде и брать на себя ответственность. Развитие кадрового 
+                                потенциала компании — важная составляющая стратегии развития».
+                            </p>
+                        </div>
+                        <div class="value2">
+                            <div class="value2__title">Наши главные ценности:</div>
+                            <div class="value2__items">
+                                <div class="value2__item">
+                                    <img src="assets/img/value.png" alt="value">
+                                    <div class="value2__item--info">
+                                        <b>Доверие</b>
+                                        <p>Между компанией и сотрудниками</p>
+                                    </div>
+                                </div>
+
+                                <div class="value2__item">
+                                    <img src="assets/img/value.png" alt="value">
+                                    <div class="value2__item--info">
+                                        <b>Совершенствование</b>
+                                        <p>Между компанией и сотрудниками</p>
+                                    </div>
+                                </div>
+
+                                <div class="value2__item">
+                                    <img src="assets/img/value.png" alt="value">
+                                    <div class="value2__item--info">
+                                        <b>Инновационность</b>
+                                        <p>Между компанией и сотрудниками</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="care">
+                            <div class="care__title value2__title">Забота о сотрудниках – приоритет компании</div>
+                            <div class="care__items">
+                                <div class="care__item">
+                                    <b>Социальный пакет и льготы</b>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Отпускные выплаты</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Поощрения к свадьбе</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Компенсации за детсад</p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Питание и проезд</p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Путёвки</p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Беспроцентные ссуды на жильё</p>
+                                        </li>
+                                    </ul>
+                                    <b>Бонус</b>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Ежемесячных премий</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Квартальные премий</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Проектные премии</p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Доплаты за ЗОЖ</p>
+                                        </li>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Компенсации многодетным и нуждающимся семьям</p>
+                                        </li>                                        
+                                    </ul>
+                                </div>
+                                 <div class="care__item">
+                                    <b>Корпоративная культура</b>
+                                    <ul>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Культурные и спортивные мероприятия</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>КМ-лиги по футболу</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>КМ-лиги по хоккею</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Бесплатные тренировки для детей</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Доступ к  бассейну «Алма-Ата»</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>ФОК «Горняк» футбольное поле, корты,  спортплощадки</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                 <div class="care__item">
+                                    <b>Преемственность поколений</b>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Активно работают Советы ветеранов и молодежи</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>К праздникам поощряются лучшие сотрудники.</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Развитая преемственность поколений</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Премия «Алтын канат»</p>
+                                        </li>
+                                         <li>
+                                            <img src="assets/img/icons/check.svg" alt="icon">
+                                            <p>Трудовые династии</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main> 
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <a href="/" class="footer__logo">
+                <img src="assets/img/icons/logo2.png" alt="logo">
+            </a>
+            <div class="footer__subtitle desk">Страницы сайта</div>
+            <div class="footer__subtitle desk">Контакты</div>
+            <div class="footer__subtitle desk">Наши партнеры</div>
+        </div>
+
+        <div class="footer__mid">
+            <div class="footer__col">                
+                <div class="footer__socials">
+                    <a href="">
+                        <img src="assets/img/icons/face.svg" alt="social">
+                    </a>
+                     <a href="">
+                        <img src="assets/img/icons/yout.svg" alt="social">
+                    </a>
+                     <a href="">
+                        <img src="assets/img/icons/inst.svg" alt="social">
+                    </a>
+                     <a href="">
+                        <img src="assets/img/icons/ball.svg" alt="social">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <div class="footer__subtitle mob">Страницы сайта</div>
+                <nav class="footer__nav">
+                    <ul>
+                        <li>
+                            <a href="about.html">О компании</a>
+                        </li>
+                         <li>
+                            <a href="products.html">Продукция</a>
+                        </li>
+                         <li>
+                            <a href="security.html">Безопасность</a>
+                        </li>
+                         <li>
+                            <a href="manafac.html">Производство</a>
+                        </li>
+                         <li>
+                            <a href="develop.html">Устойчивое развитие</a>
+                        </li>
+                         <li>
+                            <a href="news.html">Новости</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="cabinet.html">Личный кабинет</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer__col">
+                <div class="footer__subtitle mob">Контакты</div>
+                <div class="footer__contacts">
+                    <div class="footer__contacts--item">
+                        <img src="assets/img/icons/mail.svg" alt="icon">
+                        <a href="mailto:support@km.kz" class="footer__contacts--title">support@km.kz</a>
+                    </div>
+                     <div class="footer__contacts--item">
+                        <img src="assets/img/icons/call.svg" alt="icon">
+                        <a href="+77777777777" class="footer__contacts--title">+7 777 777 7777</a>
+                    </div>
+                     <div class="footer__contacts--item">
+                        <img src="assets/img/icons/location.svg" alt="icon">
+                        <b class="footer__contacts--title">Костанайская область, г. Житикара, ул. Ленина, 67</b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <div class="footer__subtitle mob">Наши партнеры</div>
+                <div class="footer__partners">
+                    <a href="">Хризотиловая Ассоциация</a>
+                    <a href="">ОАО Оренбургские минералы</a>
+                    <a href="">ТОО “Tectum Engineerring”</a>
+                    <a href="">Шиферный завод</a>
+                    <a href="">ТОО “МехЛитКом”</a>
+                    <a href="">Газета «Хризотил КМ”</a>
+                    <a href="">СКАЧАТЬ ПРИЛОЖЕНИЕ «KM QR»</a>
+                    <a href="">Веб-платформа «АО КМ»</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bot">
+            <div class="footer__rights footer__small--text">© 2025  km.kz. Все права защищены.</div>
+            <div class="footer__right">
+                <a href="map.html" class="footer__small--text">Карта сайта</a>
+                <a class="footer__small--text" href="policy.html">Политика конфиденциальности</a>
+                <div class="footer__made">
+                    <p class="footer__small--text">Разработано</p>
+                    <a href="https://i-marketing.kz/">
+                        <img src="assets/img/icons/imark.svg" alt="logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer> 
+
+<div class="preloader">
+    <img src="assets/img/icons/logo1.svg" alt="logo">
+</div>
+
+
+<script src="./assets/js/jquery-3.2.1.min.js" ></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="./assets/js/mask.min.js" defer></script>
+<script src="./assets/js/slick.js" defer></script>
+<script src="./assets/js/slides.min.js" defer></script>
+<script src="./assets/js/script.js" defer></script>
+
+
+</body>
+</html>
