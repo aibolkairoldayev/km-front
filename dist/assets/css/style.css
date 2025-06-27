@@ -1085,6 +1085,11 @@ body::-webkit-scrollbar {
     height: 320px;
   }
 
+  .main-banner__left {
+    top: 80px;
+    height: 100%;
+  }
+
   .breads {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
