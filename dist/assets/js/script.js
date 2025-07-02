@@ -227,3 +227,45 @@ $(document).ready(function () {
         $iframe.attr('src', autoplaySrc);
     });
 });
+
+
+//taimer in works page
+
+$(function(){
+    const $hidden = $('.works__hidden');
+    const $show = $('.works__show');
+    const now = new Date();
+    const targetText = $hidden.text().trim(); // "23:00"
+    const [hours, minutes] = targetText.split(':').map(Number);
+
+    let targetDate = new Date();
+    targetDate.setHours(hours);
+    targetDate.setMinutes(minutes);
+    targetDate.setSeconds(0);
+    targetDate.setMilliseconds(0);
+
+    // Если текущее время уже позже target, ставим на следующий день
+    if (targetDate <= now) {
+        targetDate.setDate(targetDate.getDate() + 1);
+    }
+
+    function updateTimer() {
+        const current = new Date();
+        let diff = Math.floor((targetDate - current) / 1000); // в секундах
+
+        if (diff < 0) diff = 0;
+
+        const h = String(Math.floor(diff / 3600)).padStart(2, '0');
+        const m = String(Math.floor((diff % 3600) / 60)).padStart(2, '0');
+        const s = String(diff % 60).padStart(2, '0');
+
+        $show.text(`${h}:${m}:${s}`);
+
+        if (diff === 0) {
+            clearInterval(timer);
+        }
+    }
+
+    updateTimer(); // первая отрисовка сразу
+    const timer = setInterval(updateTimer, 1000);
+});

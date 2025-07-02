@@ -29,10 +29,9 @@
   </noscript>
   <title>KM</title>
 </head>
-
 <body class="body">
 
-    <header class="header">
+<header class="header">
     <div class="container">
         <a href="/" class="header__logo">
             <img src="assets/img/icons/logo1.svg" alt="logo">
@@ -144,27 +143,66 @@
             </a>
         </div>
     </div>
-</div>
-    <main class="main errPage">
-    <div class="error2 wbg">
-        <div class="error2__bg wbg__bg">
+</div> 
+<main class="main contactsPage">
+    <div class="contacts wbg">
+        <div class="contacts__bg wbg__bg">
             <picture>
-                <img src="assets/img/errror-bg.png" alt="bg">
+                <img src="assets/img/contacts.png" alt="bg">
             </picture>
         </div>
-
         <div class="container">
-            <div class="error2__content">
-                <img src="assets/img/icons/error.svg" alt="icon" class="error2__icon">
-                <div class="error2__right">
-                    <b>СТРАНИЦА НЕ НАЙДЕНА</b>
-                    <a href="/" class="error2__btn">На главную</a>
+            <div class="breads">
+                <a href="/">Главная </a>
+                <span>/</span>                
+                <p>Контакты</p>
+            </div>
+
+            <div class="contacts__content">
+                <div class="contacts__left">
+                    <h1 class="contacts__title">Контакты</h1>
+                    <div class="contacts__text">
+                        Свяжитесь с нами используя форму обратной связи или телефон
+                    </div>
+
+                    <div class="contacts__links">
+                        <a href="mailto:support@km.kz" class="contacts__link">
+                            <img src="assets/img/icons/mail.svg" alt="icon">
+                            <span>support@km.kz</span>
+                        </a>
+                         <a href="tel:" class="contacts__link">
+                            <img src="assets/img/icons/call.svg" alt="icon">
+                            <span>+7 777 777 7777</span>
+                        </a>
+                    </div>
+
+                    <div class="contacts__form">
+                        <form action="">
+                            <div class="contacts__top">
+                                <input type="text" placeholder="ФИО">
+                                <input type="tel" placeholder="Номер телефона">
+                            </div>
+                            <textarea name="" id="" placeholder="Ваше сообщение"></textarea>
+                            <button class="contacts__btn" type="submit">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="contacts__right">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d727.0354796589507!2d61.19482069983874!3d52.19894001209048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d3231903ce38b9%3A0x2afe7d0ff796755b!2z0YPQuy4g0JvQtdC90LjQvdCwIDY3LCDQltC40YLQuNC60LDRgNCwIDExMDAwMA!5e0!3m2!1sru!2skz!4v1751450916442!5m2!1sru!2skz" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        >
+                    </iframe>
                 </div>
             </div>
         </div>
     </div>
-</main>
-    <footer class="footer">
+</main> 
+<footer class="footer">
     <div class="container">
         <div class="footer__top">
             <a href="/" class="footer__logo">
@@ -272,14 +310,14 @@
             </div>
         </div>
     </div>
-</footer>
-    
+</footer> 
+
 <div class="preloader">
     <img src="assets/img/icons/logo1.svg" alt="logo">
 </div>
 
-    
-    <script src="./assets/js/jquery-3.2.1.min.js" ></script>
+
+<script src="./assets/js/jquery-3.2.1.min.js" ></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script src="./assets/js/mask.min.js" defer></script>
 <script src="./assets/js/slick.js" defer></script>
@@ -288,5 +326,4 @@
 
 
 </body>
-
 </html>
