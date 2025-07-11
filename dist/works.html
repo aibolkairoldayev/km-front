@@ -167,7 +167,19 @@
         </div>
     </div>
 </main>
-    <footer class="footer">
+    <div class="ups">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <g clip-path="url(#clip0_1859_2271)">
+            <path d="M28.1402 26.1749L20.4902 18.5415L12.8402 26.1749L10.4902 23.8249L20.4902 13.8249L30.4902 23.8249L28.1402 26.1749Z" fill="white"/>
+        </g>
+        <defs>
+            <clipPath id="clip0_1859_2271">
+                <rect width="40" height="40" fill="white"/>
+            </clipPath>
+        </defs>
+    </svg>
+</div>
+<footer class="footer">
     <div class="container">
         <div class="footer__top">
             <a href="/" class="footer__logo">
@@ -281,7 +293,31 @@
     <img src="assets/img/icons/logo1.svg" alt="logo">
 </div>
 
-    
+    <div class="modal modal1">
+    <div class="modal__wrapper modal1__wrapper"></div>
+    <div class="modal__content modal1__content">
+        <div class="modal__close" onClick="closeModal1()">
+            <img src="assets/img/icons/close.svg" alt="icon">
+        </div>
+        <div class="recrut__app modal1__inner">
+            <b>ОТправьте ваше резюме</b>
+            <form action="">
+                <div class="recrut__app--top">
+                    <input id="name" type="text" placeholder="ФИО" required>
+                    <input id="tel" type="tel" placeholder="Номер телефона" required>
+                </div>
+                <textarea name="" id="" placeholder="Ваше сообщение"></textarea>
+                <div class="recrut__app--btns">
+                    <label for="" class="recrut__app--file">
+                        <input type="file" value="">
+                        <span>Приложить файл</span>
+                    </label>
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
     <script src="./assets/js/jquery-3.2.1.min.js" ></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script src="./assets/js/mask.min.js" defer></script>

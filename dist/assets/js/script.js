@@ -269,3 +269,216 @@ $(function(){
     updateTimer(); // первая отрисовка сразу
     const timer = setInterval(updateTimer, 1000);
 });
+
+// to up btn func
+$(document).ready(function () {
+  const $ups = $('.ups');
+
+  // Отслеживание скролла
+  $(window).on('scroll', function () {
+    if ($(this).scrollTop() > 500) {
+      $ups.addClass('show');
+    } else {
+      $ups.removeClass('show');
+    }
+  });
+
+  // Клик по кнопке для плавного возврата к верху
+  $ups.on('click', function () {
+    $('html, body').animate({ scrollTop: 0 }, 500); // 500 = скорость в мс
+  });
+});
+
+// open/close modal
+function openModal1() {
+    $('.modal1').addClass('open');
+    $('body').css('overflow', 'hidden');
+}
+function closeModal1() {
+    $('.modal1').removeClass('open');
+    $('body').css('overflow', 'unset');
+}
+$('.modal1__wrapper').click(()=> {
+    closeModal1()
+})
+
+//develop page map moving
+$(document).ready(function() {
+    const $map = $('.map2__bg');
+    let isDragging = false;
+    let startX, startY;
+    let currentX = 0, currentY = 0;
+
+    // Масштаб на 15%
+    let scale = 1.15;
+    $map.css('transform', `scale(${scale}) translate(0px, 0px)`);
+    let mapWidth = $map.width() * scale;
+    let mapHeight = $map.height() * scale;
+    let wrapperWidth = $map.parent().width();
+    let wrapperHeight = $map.parent().height();
+
+    // Вычисляем максимальные сдвиги, чтобы не оголять края
+    let maxX = (mapWidth - wrapperWidth) / 2;
+    let maxY = (mapHeight - wrapperHeight) / 2;
+
+    $map.on('mousedown', function(e) {
+        isDragging = true;
+        startX = e.pageX - currentX;
+        startY = e.pageY - currentY;
+        e.preventDefault();
+    });
+
+    $(document).on('mousemove', function(e) {
+        if (isDragging) {
+            let x = e.pageX - startX;
+            let y = e.pageY - startY;
+
+            // Ограничиваем движение в пределах карты
+            x = Math.max(-maxX, Math.min(maxX, x));
+            y = Math.max(-maxY, Math.min(maxY, y));
+
+            currentX = x;
+            currentY = y;
+
+            $map.css('transform', `scale(${scale}) translate(${x}px, ${y}px)`);
+        }
+    });
+
+    $(document).on('mouseup', function() {
+        isDragging = false;
+    });
+
+    // Для мобильных, если нужно
+    $map.on('touchstart', function(e) {
+        isDragging = true;
+        const touch = e.originalEvent.touches[0];
+        startX = touch.pageX - currentX;
+        startY = touch.pageY - currentY;
+    });
+
+    $(document).on('touchmove', function(e) {
+        if (isDragging) {
+            const touch = e.originalEvent.touches[0];
+            let x = touch.pageX - startX;
+            let y = touch.pageY - startY;
+
+            x = Math.max(-maxX, Math.min(maxX, x));
+            y = Math.max(-maxY, Math.min(maxY, y));
+
+            currentX = x;
+            currentY = y;
+
+            $map.css('transform', `scale(${scale}) translate(${x}px, ${y}px)`);
+        }
+    });
+
+    $(document).on('touchend', function() {
+        isDragging = false;
+    });
+});
+
+//map4 points activation
+$('.mark3').on('click', function() {
+    let index = $('.mark3').index(this);
+    $('.social__info').removeClass('active').eq(index).addClass('active');
+});
+
+
+//map 4 navigation
+$(document).ready(function() {
+    const $map = $('.social__map--bg');
+    let isDragging = false;
+    let startX, startY;
+    let currentX = 0, currentY = 0;
+
+    // Масштаб на 15%
+    let scale = 1.15;
+    $map.css('transform', `scale(${scale}) translate(0px, 0px)`);
+    let mapWidth = $map.width() * scale;
+    let mapHeight = $map.height() * scale;
+    let wrapperWidth = $map.parent().width();
+    let wrapperHeight = $map.parent().height();
+
+    // Вычисляем максимальные сдвиги, чтобы не оголять края
+    let maxX = (mapWidth - wrapperWidth) / 2;
+    let maxY = (mapHeight - wrapperHeight) / 2;
+
+    $map.on('mousedown', function(e) {
+        isDragging = true;
+        startX = e.pageX - currentX;
+        startY = e.pageY - currentY;
+        e.preventDefault();
+    });
+
+    $(document).on('mousemove', function(e) {
+        if (isDragging) {
+            let x = e.pageX - startX;
+            let y = e.pageY - startY;
+
+            // Ограничиваем движение в пределах карты
+            x = Math.max(-maxX, Math.min(maxX, x));
+            y = Math.max(-maxY, Math.min(maxY, y));
+
+            currentX = x;
+            currentY = y;
+
+            $map.css('transform', `scale(${scale}) translate(${x}px, ${y}px)`);
+        }
+    });
+
+    $(document).on('mouseup', function() {
+        isDragging = false;
+    });
+
+    // Для мобильных, если нужно
+    $map.on('touchstart', function(e) {
+        isDragging = true;
+        const touch = e.originalEvent.touches[0];
+        startX = touch.pageX - currentX;
+        startY = touch.pageY - currentY;
+    });
+
+    $(document).on('touchmove', function(e) {
+        if (isDragging) {
+            const touch = e.originalEvent.touches[0];
+            let x = touch.pageX - startX;
+            let y = touch.pageY - startY;
+
+            x = Math.max(-maxX, Math.min(maxX, x));
+            y = Math.max(-maxY, Math.min(maxY, y));
+
+            currentX = x;
+            currentY = y;
+
+            $map.css('transform', `scale(${scale}) translate(${x}px, ${y}px)`);
+        }
+    });
+
+    $(document).on('touchend', function() {
+        isDragging = false;
+    });
+});
+const waveData = {
+  "2021": [10, 70, 30, 60],
+  "2022": [60, 70, 50, 80],
+  "2023": [80, 60, 35, 55],
+  "2024": [55, 40, 70, 50],
+  "2025": [50, 65, 45, 70]
+};
+
+$('.year').each(function(){
+  const year = $(this).data('year');
+  const points = waveData[year];
+  const w = $(this).width();
+  const h = $(this).height();
+  const stepX = w / 3;
+
+  let polyPoints = `0,${h} `;
+  points.forEach((p, i) => {
+    const x = i * stepX;
+    const y = h - (p/100 * h);
+    polyPoints += `${x},${y} `;
+  });
+  polyPoints += `${w},${h}`;
+  $(this).find('polygon').attr('points', polyPoints).attr('fill', 'url(#grad)');
+});
