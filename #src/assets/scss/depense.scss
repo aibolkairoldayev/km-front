@@ -317,6 +317,11 @@
         &:hover {
             background: radial-gradient(234.69% 138.69% at 0.9% 2.98%, rgba(23, 83, 169, 0.60) 0%, rgba(23, 83, 169, 0.00) 100%);
             backdrop-filter: blur(20px);
+            .history {
+                &__line {
+                    filter: brightness(0) saturate(100%) invert(42%) sepia(91%) saturate(665%) hue-rotate(186deg) brightness(100%) contrast(105%);
+                }
+            }
         }
         b {
             color: #FFF;
@@ -423,6 +428,14 @@
     &__title {
         margin-bottom: 40px;
     }
+    &__item {
+        img {
+            border-radius: 2px;
+            background: rgba(41, 41, 41, 0.70);
+            backdrop-filter: blur(12px);
+            padding: 16px;
+        }
+    }
 }
 
 .corporate {
@@ -453,19 +466,11 @@
                     &--info {
                         height: 180px;
                     }
-                    &--img {
-                        img {
-                            opacity: 1;
-                        }
-                    }
+
                 }
             }
         }
-        &--img {
-            img {
-                opacity: 0.6;
-            }
-        }
+
         &--info {
             padding: 24px;
             height: 150px;
@@ -759,8 +764,7 @@
                 background: #1753A9;
                 height: 52px;
                 align-items: center;
-                padding-left: 24px;
-                justify-content: space-between;
+                justify-content: center;
                 &:hover {
                     opacity: 0.8;
                 }
@@ -771,13 +775,11 @@
                     font-size: 18px;
                     font-weight: 400;
                     line-height: normal;
-                    
                     height: 100%;
                     display: flex;
                     align-items: center;
-                    width: 72%;
-                    padding-left: 20px;
                     text-align: center;
+                    color: #FFF;
                 }
                 
             }
@@ -1412,7 +1414,6 @@
         }
         img {
             width: 100%;
-            opacity: 0.7;
         }
     }
     &__right {
@@ -1495,6 +1496,9 @@
     &__banner {
         position: relative;
         height: 500px;
+         @media(max-width: 768px) {
+            height: 300px;
+        }
         &--img {
             height: 100%;
             img {
@@ -1517,6 +1521,18 @@
             font-size: 32px;
             font-weight: 700;
             line-height: normal;
+            @media(max-width: 992px) {
+                font-size: 28px;
+            }
+            @media(max-width: 768px) {
+                font-size: 24px;
+            }
+            @media(max-width: 576px) {
+                font-size: 20px;
+            }
+            @media(max-width: 480px) {
+                font-size: 16px;
+            }
         }
     }
     &__text {

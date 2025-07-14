@@ -67,15 +67,6 @@ $(function () {
   });
 });
 
-//header fixed func
-$(window).on('scroll', function () {
-  if ($(window).scrollTop() > 0) {
-    $('.header').addClass('fixed');
-  } else {
-    $('.header').removeClass('fixed');
-  }
-});
-
 //lang open/close
 $(document).ready(function() {
   // Открытие/закрытие дропдауна по клику на текущий язык
@@ -105,20 +96,41 @@ $('.burger__lang--current').click(()=> {
     $('.burger__lang--other').toggleClass('show')
 })
 
-//burger open/close
+// header fixed on scroll
+$(window).on('scroll', function () {
+  if (!$('.burger').hasClass('open')) { // если бургер закрыт
+    if ($(window).scrollTop() > 0) {
+      $('.header').addClass('fixed');
+    } else {
+      $('.header').removeClass('fixed');
+    }
+  } else {
+    $('.header').addClass('fixed'); // при открытом бургере фикс всегда
+  }
+});
+
+// burger open/close
 function toggleBurger() {
   $('.burger').toggleClass('open');
   $('.burger__btn').toggleClass('open');
-    if ($('.burger').hasClass('open')) {
-      $('body').css('overflow', 'hidden');
+
+  if ($('.burger').hasClass('open')) {
+    $('body').css('overflow', 'hidden');
+    $('.header').addClass('fixed'); // фиксируем хедер при открытии
   } else {
-      $('body').css('overflow', '');
+    $('body').css('overflow', '');
+
+    // если вверху страницы, убираем fixed
+    if ($(window).scrollTop() === 0) {
+      $('.header').removeClass('fixed');
+    }
+    // если не вверху, оставляем fixed
   }
 }
 
-$('.burger__wrapper').click(()=> {
-  toggleBurger()
-})
+$('.burger__wrapper').click(() => {
+  toggleBurger();
+});
 
 //container left margin
 var wholeWidth = $(window).width();

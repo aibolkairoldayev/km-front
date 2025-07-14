@@ -182,6 +182,16 @@
                 display: none;
             }
         }
+        @media(max-width: 576px) {
+            height: auto;
+        }
+        .main-banner {
+            &__left {
+                @media(max-width: 576px) {
+                    height: 100%;
+                }
+            }
+        }
     }
     @media(max-width: 992px) {
         margin-top: 80px;
@@ -225,6 +235,7 @@
             width: 100%;
             justify-content: center;
         }
+       
 
         img {
             height: 100%;
@@ -266,6 +277,9 @@
         @media(max-width: 768px) {
             justify-content: start;
             padding-top: 12px;
+        }
+        @media(max-width: 576px) {
+            padding-bottom: 25px;
         }
     }
     &__text {

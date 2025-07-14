@@ -9,6 +9,7 @@
     z-index: 500;
     &.fixed {
         background: #001636;
+        border-bottom: none;
     }
     .container {
         display: flex;

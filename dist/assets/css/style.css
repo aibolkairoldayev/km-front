@@ -176,6 +176,7 @@ body::-webkit-scrollbar {
 
 .header.fixed {
   background: #001636;
+  border-bottom: none;
 }
 
 .header .container {
@@ -1116,8 +1117,20 @@ body::-webkit-scrollbar {
     display: block;
   }
 
+  .main-banner.no-right {
+    height: auto;
+  }
+
+  .main-banner.no-right .main-banner__left {
+    height: 100%;
+  }
+
   .main-banner {
     margin-top: 70px;
+  }
+
+  .main-banner .container {
+    padding-bottom: 25px;
   }
 
   .breads a {

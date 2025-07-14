@@ -1024,6 +1024,7 @@
   font-weight: 400;
   line-height: normal;
   margin-right: 12px;
+  white-space: nowrap;
 }
 
 .news__inner {
@@ -1395,6 +1396,10 @@
 
   .news__right .news__item {
     height: 310px;
+  }
+
+  .news__item:first-child .news__item--info b {
+    font-size: 20px;
   }
 }
 
