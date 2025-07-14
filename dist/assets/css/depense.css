@@ -71,13 +71,8 @@
   background-color: #1753A9;
 }
 
-.footer__socials a:nth-child(2) img {
-  margin-top: 5px;
-}
-
 .footer__socials a img {
   width: 22px;
-  height: 22px;
 }
 
 .footer__nav li {
@@ -2920,6 +2915,25 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transform: translateX(-50px);
+      -ms-transform: translateX(-50px);
+          transform: translateX(-50px);
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease, -webkit-transform 0.8s ease;
+  transition: opacity 0.8s ease, -webkit-transform 0.8s ease;
+  -o-transition: transform 0.8s ease, opacity 0.8s ease;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition: transform 0.8s ease, opacity 0.8s ease, -webkit-transform 0.8s ease;
+  -webkit-transition-delay: 0.5s;
+       -o-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.map2__cont.show {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .map2__cont b {
@@ -3226,6 +3240,10 @@
   position: relative;
   padding-top: 70px;
   margin-top: 94px;
+}
+
+.new .breads {
+  max-width: calc(100% - 430px);
 }
 
 .new__bg {
@@ -3651,9 +3669,11 @@
 .skills__img {
   width: 30%;
   position: absolute;
-  height: 100%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 35%;
-  top: 2px;
+  top: 50%;
 }
 
 .skills__content {
@@ -5113,6 +5133,10 @@ svg {
 }
 
 @media (max-width: 1200px) {
+  .about__graph--top {
+    width: 130%;
+  }
+
   .goals__items {
     grid-template-columns: 1fr 1fr;
   }
@@ -5339,6 +5363,19 @@ svg {
 
   .footer__right {
     gap: 0 20px;
+  }
+
+  .about__graph--top {
+    width: 200%;
+    left: -200px;
+  }
+
+  .about__graph--top b {
+    font-size: 52px;
+  }
+
+  .about__graph--top p {
+    font-size: 18px;
   }
 
   .goals__top {
@@ -5789,6 +5826,10 @@ svg {
     width: 100%;
   }
 
+  .about__graph--top b {
+    font-size: 40px;
+  }
+
   .strategy__title {
     font-size: 24px;
   }
@@ -5818,6 +5859,10 @@ svg {
 
   .modal2__info {
     width: 100%;
+  }
+
+  .mainprod {
+    padding-top: 30px;
   }
 
   .mainprod__content {
@@ -6247,6 +6292,18 @@ svg {
     grid-template-columns: 1fr;
   }
 
+  .about__graph--top {
+    top: -65px;
+  }
+
+  .about__graph--top b {
+    font-size: 34px;
+  }
+
+  .about__graph--top p {
+    font-size: 16px;
+  }
+
   .about__video--content {
     width: 90%;
     left: 5%;
@@ -6580,6 +6637,11 @@ svg {
 
   .site-map__items {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .graph {
+    height: 200px;
+    margin-top: 80px;
   }
 }
 

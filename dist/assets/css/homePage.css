@@ -1320,6 +1320,71 @@
     display: none;
   }
 
+  .map .markers:after {
+    -webkit-animation: markersAfterMobile 3s infinite linear;
+    animation: markersAfterMobile 3s infinite linear;
+  }
+
+  .map .markers.markerKz {
+    left: 673px;
+    top: 200px;
+  }
+
+  .map .markers.markerUz {
+    left: 670px;
+    top: 222px;
+  }
+
+  .map .markers.markerTm {
+    left: 655px;
+    top: 228px;
+  }
+
+  .map .markers.markerKg {
+    left: 702px;
+    top: 218px;
+  }
+
+  .map .markers.markerTj {
+    left: 694px;
+    top: 232px;
+  }
+
+  .map .markers.markerCn {
+    left: 775px;
+    top: 243px;
+  }
+
+  .map .markers.markerId {
+    left: 845px;
+    top: 362px;
+  }
+
+  .map .markers.markerIn {
+    left: 721px;
+    top: 291px;
+  }
+
+  .map .markers.markerBd {
+    left: 759px;
+    top: 278px;
+  }
+
+  .map .markers.markerLk {
+    left: 737px;
+    top: 332px;
+  }
+
+  .map .markers.markerVn {
+    left: 813px;
+    top: 312px;
+  }
+
+  .map .markers.markerTh {
+    left: 779px;
+    top: 304px;
+  }
+
   .news__bg {
     display: none;
   }

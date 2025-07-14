@@ -78,25 +78,27 @@ $(window).on('scroll', function () {
 
 //lang open/close
 $(document).ready(function() {
-  // Клик по текущему языку — переключение класса "актив" у блока с другими языками
+  // Открытие/закрытие дропдауна по клику на текущий язык
   $('.header__lang--current').on('click', function(e) {
     e.stopPropagation();
     $('.header__lang--other').toggleClass('active');
   });
 
-  // Клик по элементу языка
+  // Закрытие дропдауна при клике на элемент языка
   $('.header__lang--item').on('click', function() {
-    // Проверяем, есть ли у кликнутого .header__lang--item класс active
     if (!$(this).hasClass('active')) {
       $('.header__lang--other').removeClass('active');
     }
   });
 
-  // Клик вне меню — закрытие, если оно открыто
-  if (!$(e.target).closest('.header__lang').length) {
-    $('.header__lang--other').removeClass('active');
-  }
+  // Закрытие при клике вне дропдауна
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.header__lang').length) {
+      $('.header__lang--other').removeClass('active');
+    }
+  });
 });
+
 
 //burger lang open/close
 $('.burger__lang--current').click(()=> {
@@ -161,6 +163,8 @@ $(document).ready(function () {
   });
 });
 
+
+
 //main tab links func
 $(document).ready(function () {
   $('.tab-link').on('click', function (e) {
@@ -180,9 +184,11 @@ $(document).ready(function () {
        // фиксированный отступ от верха
       const targetPosition = target.offset().top - headerOffset;
 
-      $('html, body').animate({
-        scrollTop: targetPosition
-      }, 500); // 500 — скорость прокрутки в мс
+      $('html, body').scrollTop(targetPosition);
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth' // мгновенно
+      });
     }
   });
 });
@@ -481,4 +487,76 @@ $('.year').each(function(){
   });
   polyPoints += `${w},${h}`;
   $(this).find('polygon').attr('points', polyPoints).attr('fill', 'url(#grad)');
+});
+
+// number increase animation
+$(document).ready(function() {
+    function animateCounter($el) {
+        let text = $el.text().trim();
+        let numMatch = text.match(/\d+/);
+        if (!numMatch) return;
+
+        let target = parseInt(numMatch[0], 10);
+        let duration = 2000; // длительность анимации (мс)
+        let frameRate = 30;  // кадров в секунду
+        let frames = duration / (1000 / frameRate);
+        let current = 0;
+        let increment = target / frames;
+
+        let originalText = text;
+        let prefix = originalText.match(/^[^\d]+/)?.[0] || '';
+        let suffix = originalText.match(/[^\d]+$/)?.[0] || '';
+
+        let interval = setInterval(function() {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(interval);
+            }
+            $el.text(prefix + Math.floor(current) + suffix);
+        }, 1000 / frameRate);
+    }
+
+    function isElementInViewport(el) {
+        let rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
+    }
+
+    function checkCounters() {
+        $('.counter-number').each(function() {
+            let $this = $(this);
+            if (!$this.hasClass('animated') && isElementInViewport(this)) {
+                $this.addClass('animated');
+                animateCounter($this);
+            }
+        });
+    }
+
+    $(window).on('scroll resize load', checkCounters);
+});
+
+
+//develop page slick animation from left
+$(document).ready(function() {
+    function isElementInViewport(el) {
+        let rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
+    }
+
+    function animateMap2() {
+        $('.map2__cont').each(function() {
+            let $this = $(this);
+            if (!$this.hasClass('show') && isElementInViewport(this)) {
+                $this.addClass('show');
+            }
+        });
+    }
+
+    $(window).on('scroll resize load', animateMap2);
 });

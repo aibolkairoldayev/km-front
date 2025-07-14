@@ -280,7 +280,7 @@ body::-webkit-scrollbar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: rgba(0, 0, 0, 0.32);
+  background: rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   max-height: 0;
   overflow-y: hidden;
@@ -344,6 +344,16 @@ body::-webkit-scrollbar {
   left: 0;
 }
 
+.burger.open .burger__wrapper {
+  background-color: #000;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+  -webkit-transition-delay: 0.2s;
+       -o-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
 .burger__btn {
   display: none;
   width: 32px;
@@ -402,7 +412,7 @@ body::-webkit-scrollbar {
 }
 
 .burger__wrapper {
-  background-color: #000;
+  background-color: transparent;
   opacity: 0.7;
   position: absolute;
   top: 0;
@@ -689,6 +699,7 @@ body::-webkit-scrollbar {
   height: 440px;
   position: relative;
   z-index: 100;
+  margin-top: 94px;
 }
 
 .main-banner::after {
@@ -699,9 +710,9 @@ body::-webkit-scrollbar {
   z-index: 102;
   content: "";
   position: absolute;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(7, 48, 110, 0.88)), color-stop(rgba(7, 48, 110, 0.99)), to(rgba(7, 49, 110, 0)));
-  background: -o-linear-gradient(left, rgba(7, 48, 110, 0.88) 0%, rgba(7, 48, 110, 0.99), rgba(7, 49, 110, 0) 100%);
-  background: linear-gradient(to right, rgba(7, 48, 110, 0.88) 0%, rgba(7, 48, 110, 0.99), rgba(7, 49, 110, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(7, 49, 110, 0.0235294118)), color-stop(rgba(7, 48, 110, 0.99)), to(rgba(7, 49, 110, 0)));
+  background: -o-linear-gradient(left, rgba(7, 49, 110, 0.0235294118) 0%, rgba(7, 48, 110, 0.99), rgba(7, 49, 110, 0) 100%);
+  background: linear-gradient(to right, rgba(7, 49, 110, 0.0235294118) 0%, rgba(7, 48, 110, 0.99), rgba(7, 49, 110, 0) 100%);
 }
 
 .main-banner__left {
@@ -711,6 +722,12 @@ body::-webkit-scrollbar {
   width: 50%;
   height: 100%;
   z-index: 101;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 .main-banner__left img {
@@ -768,6 +785,8 @@ body::-webkit-scrollbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .breads a {
@@ -776,7 +795,7 @@ body::-webkit-scrollbar {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%;
+  line-height: 145%;
 }
 
 .breads span {
@@ -796,6 +815,7 @@ body::-webkit-scrollbar {
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
+  white-space: wrap;
 }
 
 .main-title {
@@ -974,6 +994,10 @@ body::-webkit-scrollbar {
     height: calc(100% - 80px);
   }
 
+  .main-banner {
+    margin-top: 80px;
+  }
+
   .main-title {
     font-size: 60px;
   }
@@ -1002,12 +1026,17 @@ body::-webkit-scrollbar {
     max-width: 560px;
   }
 
+  .main-banner.no-right {
+    height: 300px;
+  }
+
   .main-banner.no-right .main-banner__right {
     display: none;
   }
 
   .main-banner {
-    height: 400px;
+    height: 440px;
+    background-color: #07316E;
   }
 
   .main-banner::after {
@@ -1015,30 +1044,31 @@ body::-webkit-scrollbar {
   }
 
   .main-banner__left {
-    height: 50%;
+    height: 200px;
     width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .main-banner__left img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .main-banner__right {
-    height: 50%;
+    height: 250px;
     width: 100%;
-    top: 50%;
+    top: 200px;
   }
 
   .main-banner .container {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
-  }
-
-  .breads {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    padding-top: 12px;
   }
 
   .main-title {
@@ -1087,12 +1117,7 @@ body::-webkit-scrollbar {
   }
 
   .main-banner {
-    height: 320px;
-  }
-
-  .main-banner__left {
-    top: 80px;
-    height: 100%;
+    margin-top: 70px;
   }
 
   .breads a {

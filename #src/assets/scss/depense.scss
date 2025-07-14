@@ -90,6 +90,16 @@
             display: flex;
             align-items: center;
             opacity: 0;
+            @media (max-width: 1200px) {
+                width: 130%;
+            }
+            @media (max-width: 992px) {
+                width: 200%;
+                left: -200px;
+            }
+            @media (max-width: 576px) {
+                top: -65px;
+            }
             b {
                 color: #FFF;
                 text-align: center;
@@ -98,6 +108,15 @@
                 line-height: normal;
                 width: 40%;
                 display: block;
+                @media (max-width: 992px) {
+                    font-size: 52px;
+                }
+                @media (max-width: 768px) {
+                    font-size: 40px;
+                }
+                @media (max-width: 576px) {
+                    font-size: 34px;
+                }
             }
             p {
                 color: #FFF;
@@ -105,6 +124,12 @@
                 font-weight: 700;
                 line-height: normal;
                 width: 60%;
+                @media (max-width: 992px) {
+                    font-size: 18px;
+                }
+                @media (max-width: 576px) {
+                    font-size: 16px;
+                }
             }
         }
         &--gross {
@@ -609,6 +634,9 @@
 .mainprod {
     padding-top: 80px;
     margin-bottom: 40px;
+    @media(max-width: 768px) {
+        padding-top: 30px;
+    }
     &__content {
         height: 530px;
         display: flex;
@@ -2806,6 +2834,14 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        transform: translateX(-50px);
+        opacity: 0;
+        transition: transform 0.8s ease, opacity 0.8s ease;
+        transition-delay: 0.5s;
+        &.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
         @media(max-width: 576px) {
             padding: 12px;
         }
@@ -3161,6 +3197,9 @@
     @media(max-width: 576px) {
         padding-bottom: 50px;
         padding-top: 20px;
+    }
+    .breads {
+        max-width: calc(100% - 430px);;
     }
     &__bg {
         position: absolute;
@@ -3623,9 +3662,9 @@
     &__img {
         width: 30%;
         position: absolute;
-        height: 100%;
+        transform: translateY(-50%);
         left: 35%;
-        top: 2px;
+        top: 50%;
         @media(max-width: 768px) {
             display: none;
         }
@@ -4871,6 +4910,10 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
+  @media (max-width: 576px) {
+    height: 200px;
+    margin-top: 80px;
+  }
 }
 .year {
   position: relative;
