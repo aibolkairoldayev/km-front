@@ -2366,6 +2366,42 @@
   margin: 12px 0;
 }
 
+.consum__marker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 3;
+  -webkit-animation: markers 3s infinite forwards;
+  animation: markers 3s infinite forwards;
+  -webkit-box-shadow: 0 0 4px 0 #1eff00;
+  box-shadow: 0 0 4px 0 #1eff00;
+  background: #1eff00;
+  left: 403px;
+  top: 143px;
+}
+
+.consum__marker::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: 0 0;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  -webkit-animation: markersAfter 3s infinite linear;
+  animation: markersAfter 3s infinite linear;
+  border: 3px solid #1eff00;
+  -webkit-box-shadow: 0 0 4px 0 #1eff00;
+  box-shadow: 0 0 4px 0 #1eff00;
+  background: #1eff00;
+}
+
 .consum__content {
   width: calc(100% - 326px);
   margin-left: auto;
@@ -5125,6 +5161,10 @@ svg {
     width: calc(100% - 290px);
   }
 
+  .consum__marker {
+    left: 352px;
+  }
+
   .directs__content {
     width: calc(100% - 246px);
   }
@@ -5260,6 +5300,10 @@ svg {
 
   .asfalt__bot--item {
     height: auto;
+  }
+
+  .consum__marker {
+    left: 242px;
   }
 
   .map2__content {
@@ -5556,6 +5600,10 @@ svg {
 
   .about3__place {
     height: 400px;
+  }
+
+  .consum__marker {
+    left: 301px;
   }
 
   .consum__content {
@@ -6024,6 +6072,11 @@ svg {
     width: 500px;
   }
 
+  .consum__marker {
+    left: 236px;
+    top: 79px;
+  }
+
   .consum__map {
     height: auto;
   }
@@ -6428,6 +6481,20 @@ svg {
     position: static;
     margin-top: 20px;
     width: 100%;
+  }
+
+  .consum__marker {
+    left: 41%;
+    top: 25%;
+  }
+
+  .consum__marker::after {
+    -webkit-animation: markersAfterMobile 3s infinite linear;
+    animation: markersAfterMobile 3s infinite linear;
+  }
+
+  .consum__world--text {
+    top: 35%;
   }
 
   .activ__item img {

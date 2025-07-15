@@ -369,14 +369,18 @@
             background-color: #1753A9;
         }
     }
-    &__bot {
-        display: flex;
-        align-items: center;
-        overflow-x: scroll;
-        &::-webkit-scrollbar {
-            display: none;
+     &__bot {
+        height: 160px;
+        .slick-list {
+            height: 100%;
         }
-    }
+    //     display: flex;
+    //     align-items: center;
+    //     overflow-x: scroll;
+    //     &::-webkit-scrollbar {
+    //         display: none;
+    //     }
+     }
     &__item {
         width: 210px;
         min-width: 210px;

@@ -219,3 +219,33 @@ if($(window).width() < 992) {
         ]   
     });
 }
+
+//main page hrizotil block
+$('.asbest__bot').slick({
+    slidesToShow: 3.8,
+    infinite: false,
+    dots: false,
+    arrows: false,
+    swipeToSlide: true,
+    responsive: [
+         {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2.8,
+            }
+        },
+         {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2.1,
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1.1,
+            }
+        },
+       
+    ],
+});
