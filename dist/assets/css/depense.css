@@ -164,7 +164,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  /* 19.2px */
 }
 
 .footer__right {
@@ -200,6 +199,10 @@
 
 .footer__made p {
   margin-right: 12px;
+}
+
+.footer__made a {
+  margin-bottom: 0 !important;
 }
 
 .body .editors b,
@@ -1632,7 +1635,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 2px;
-  border: 1px solid #E8EEF6;
   background: #1753A9;
   color: #FFF;
   text-align: center;
@@ -6339,6 +6341,7 @@ svg {
 @media (max-width: 576px) {
   .footer {
     padding-top: 0;
+    margin-top: 30px;
   }
 
   .footer__col:nth-child(2) .footer__subtitle.mob {
@@ -6357,6 +6360,11 @@ svg {
 
   .footer__mid {
     grid-template-columns: 1fr;
+  }
+
+  .footer__small--text {
+    color: #D4E4FD;
+    font-size: 14px;
   }
 
   .about__graph--top {

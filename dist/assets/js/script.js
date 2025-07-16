@@ -572,3 +572,37 @@ $(document).ready(function() {
 
     $(window).on('scroll resize load', animateMap2);
 });
+
+//counter in hover in about page graphs
+$('.year').on('mouseenter', function() {
+    const $year = $(this);
+    const $graphTop = $year.find('.about__graph--top');
+    const $number = $graphTop.find('b');
+
+    // Проверяем наличие <b> и непустое содержимое
+    if (!$number.length) return;
+    const rawText = $number.text().replace(/\D/g, '');
+    if (!rawText) return;
+
+    // Проверка чтобы не запускать повторно
+    if ($number.data('animated')) return;
+
+    const target = parseInt(rawText, 10);
+    const duration = 2000; // 2 секунды
+    const stepTime = 20;   // интервал в мс
+    const steps = Math.ceil(duration / stepTime);
+    let currentStep = 0;
+
+    $number.data('animated', true);
+
+    const counter = setInterval(function() {
+        currentStep++;
+        const value = Math.ceil(target * (currentStep / steps));
+        $number.text(value);
+
+        if (currentStep >= steps) {
+            clearInterval(counter);
+            $number.text(target); // точно выставляем финальное значение
+        }
+    }, stepTime);
+});

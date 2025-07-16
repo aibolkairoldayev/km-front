@@ -57,6 +57,7 @@
             padding: 24px;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             @media(max-width: 768px) {
                 width: 100%;
                 margin-bottom: 10px;
@@ -73,6 +74,9 @@
                 line-height: normal;
                 @media(max-width: 992px) {
                     font-size: 35px;
+                }
+                @media(max-width: 768px) {
+                    font-size: 42px;
                 }
             }
             p {
@@ -145,8 +149,8 @@
             font-family: "Inter", sans-serif;
             font-size: 16px;
             font-weight: 500;
-            line-height: 24px; /* 150% */
-            max-width: 485px;
+            line-height: 150%;
+            max-width: 530px;
         }
     }
     &__bot {
@@ -349,7 +353,7 @@
         display: block;
         border-radius: 2px;
         border: 1px solid rgba(232, 238, 246, .24);
-        background: #0058D6;
+        background: #1753A9;
         height: 54px;
         display: flex;
         align-items: center;
@@ -366,23 +370,22 @@
             width: 100%;
         }
         &:hover {
-            background-color: #1753A9;
+            background-color: #0058D6;
         }
     }
      &__bot {
         height: 160px;
+        .slick-slide {
+            margin-right: 16px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
         .slick-list {
             height: 100%;
         }
-    //     display: flex;
-    //     align-items: center;
-    //     overflow-x: scroll;
-    //     &::-webkit-scrollbar {
-    //         display: none;
-    //     }
      }
     &__item {
-        width: 210px;
         min-width: 210px;
         height: 160px;
         padding: 16px 32px;
@@ -390,7 +393,6 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        margin-right: 16px;
         &:last-child {
             margin-right: 0;
         }
@@ -1000,6 +1002,12 @@
         border: 1px solid #9CABC2;
         background: #07316E;
         padding: 10px 12px 10px 24px;
+        svg {
+            @media(max-width: 992px) {
+                width: fit-content;
+            }
+        }
+        
         &--mob {
             display: none;
             @media(max-width: 992px) {
