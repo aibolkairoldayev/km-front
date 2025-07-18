@@ -183,6 +183,11 @@
     margin-top: 94px;
     background: #07316E;
     &.no-right {
+        .container {
+            @media(max-width: 768px) {
+                justify-content: center;
+            }
+        }
         @media(max-width: 768px) {
             height: 300px;
             .main-banner__right {
@@ -285,6 +290,7 @@
         justify-content: center;
         @media(max-width: 768px) {
             padding-top: 12px;
+            justify-content: start;
         }
         @media(max-width: 576px) {
             padding-bottom: 25px;

@@ -1883,7 +1883,6 @@
 
 .antias__btn {
   border-radius: 2px;
-  border: 1px solid #E8EEF6;
   background: #1753A9;
   width: 360px;
   height: 52px;
@@ -2226,6 +2225,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5px;
 }
 
 .about3__title {
@@ -2679,7 +2679,7 @@
 }
 
 .respon__bot--item {
-  width: 33%;
+  width: 32.6%;
   border-radius: 5px;
   background: #07316E;
   padding: 24px;
@@ -3030,6 +3030,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 10px;
 }
 
 .social__marks--item:nth-child(2) span::before {
@@ -3450,6 +3451,11 @@
 
 .new__right {
   width: 415px;
+  position: sticky;
+  top: 90px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .new__right span {
@@ -3601,7 +3607,6 @@
 
 .banner4__btn {
   border-radius: 2px;
-  border: 1px solid #E8EEF6;
   background: #1753A9;
   height: 54px;
   color: #FFF;
@@ -3624,6 +3629,10 @@
 
 .banner4__btn:hover {
   background-color: #0058D6;
+}
+
+.banner4__bg img {
+  opacity: 0.6;
 }
 
 .whyus {
@@ -3992,6 +4001,7 @@
   line-height: normal;
   letter-spacing: 0.864px;
   text-transform: uppercase;
+  display: block;
 }
 
 .recrut__app--top {
@@ -4133,7 +4143,6 @@
 .recrut__app--btns button {
   height: 54px;
   border-radius: 2px;
-  border: 1px solid #E8EEF6;
   background: #1753A9;
   color: #FFF;
   font-family: "Inter", sans-serif;
@@ -4151,7 +4160,6 @@
   margin-bottom: 16px;
   width: 100%;
   border-radius: 2px;
-  border: 1px solid #E8EEF6;
   background: #07316E;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4414,7 +4422,6 @@
 
 .contacts__btn {
   border-radius: 2px;
-  border: 1px solid #E8EEF6;
   background: #1753A9;
   width: 360px;
   height: 54px;
@@ -5324,6 +5331,10 @@ svg {
     height: auto;
   }
 
+  .new .breads {
+    max-width: calc(100% - 345px);
+  }
+
   .new__left {
     width: calc(100% - 345px);
   }
@@ -5758,6 +5769,10 @@ svg {
     display: none;
   }
 
+  .recrut__app {
+    margin-top: 50px;
+  }
+
   .recrut__app b {
     font-size: 52px;
   }
@@ -6040,6 +6055,7 @@ svg {
 
   .asfalt {
     padding-top: 30px;
+    padding-bottom: 40px;
   }
 
   .asfalt__top {
@@ -6060,6 +6076,7 @@ svg {
 
   .asfalt__video {
     height: 320px;
+    margin-bottom: 70px;
   }
 
   .asfalt__types2--items {
@@ -6075,12 +6092,16 @@ svg {
   }
 
   .consum__marker {
-    left: 236px;
-    top: 79px;
+    left: 217px;
+    top: 117px;
   }
 
   .consum__map {
     height: auto;
+  }
+
+  .consum__world {
+    height: 450px;
   }
 
   .consum__world--text {
@@ -6174,6 +6195,10 @@ svg {
 
   .care__items {
     grid-template-columns: 1fr;
+  }
+
+  .new .breads {
+    max-width: unset;
   }
 
   .new__left {
@@ -6421,6 +6446,10 @@ svg {
     padding: 20px;
   }
 
+  .news2__bot {
+    padding-bottom: 40px;
+  }
+
   .news2__title.news__title {
     font-size: 20px;
   }
@@ -6446,8 +6475,13 @@ svg {
     width: 100%;
   }
 
+  .safety__banner {
+    height: auto;
+  }
+
   .safety__banner--info {
     font-size: 20px;
+    padding: 10px;
   }
 
   .antias .container {
@@ -6456,7 +6490,7 @@ svg {
   }
 
   .antias {
-    padding: 30px 0 20px;
+    padding: 30px 0 50px;
   }
 
   .antias__content {
@@ -6477,6 +6511,14 @@ svg {
     height: 280px;
   }
 
+  .about3__img {
+    height: 280px;
+  }
+
+  .about3__img img {
+    border-radius: 5px 5px 0 0;
+  }
+
   .about3__title {
     font-size: 16px;
   }
@@ -6487,13 +6529,12 @@ svg {
 
   .about3__info {
     position: static;
-    margin-top: 20px;
+    margin-top: -5px;
     width: 100%;
   }
 
   .consum__marker {
-    left: 41%;
-    top: 25%;
+    left: calc(50% - 63px);
   }
 
   .consum__marker::after {
@@ -6502,7 +6543,13 @@ svg {
   }
 
   .consum__world--text {
-    top: 35%;
+    top: 65px;
+    left: calc(50% - 120px);
+  }
+
+  .consum .container {
+    margin: 0;
+    max-width: unset;
   }
 
   .activ__item img {
@@ -6551,11 +6598,19 @@ svg {
         flex-wrap: wrap;
   }
 
+  .social__marks--item span {
+    font-size: 12px;
+  }
+
   .social__info {
     bottom: 24px;
     top: unset;
     height: 225px;
     width: 240px;
+  }
+
+  .managment {
+    padding-bottom: 50px;
   }
 
   .new {
@@ -6654,6 +6709,10 @@ svg {
 
   .contacts__title {
     font-size: 32px;
+  }
+
+  .contacts__right {
+    margin-bottom: 30px;
   }
 
   .contacts__right iframe {
