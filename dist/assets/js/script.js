@@ -321,24 +321,31 @@ $('.modal1__wrapper').click(()=> {
 })
 
 //develop page map moving
+//develop page map moving
 $(document).ready(function() {
     const $map = $('.map2__bg');
     let isDragging = false;
     let startX, startY;
     let currentX = 0, currentY = 0;
 
-    // Масштаб на 15%
-    let scale = 1.15;
+    // Определяем масштаб в зависимости от устройства
+    let isMobile = window.innerWidth <= 576; // или 767 по вашему макету
+    let scale = isMobile ? 2.2 : 1.15;
+
+    // Устанавливаем масштаб
     $map.css('transform', `scale(${scale}) translate(0px, 0px)`);
+
+    // Пересчет размеров карты и wrapper с учетом масштаба
     let mapWidth = $map.width() * scale;
     let mapHeight = $map.height() * scale;
     let wrapperWidth = $map.parent().width();
     let wrapperHeight = $map.parent().height();
 
-    // Вычисляем максимальные сдвиги, чтобы не оголять края
+    // Вычисляем максимальные сдвиги
     let maxX = (mapWidth - wrapperWidth) / 2;
     let maxY = (mapHeight - wrapperHeight) / 2;
 
+    // ===== PC управление мышью =====
     $map.on('mousedown', function(e) {
         isDragging = true;
         startX = e.pageX - currentX;
@@ -351,7 +358,6 @@ $(document).ready(function() {
             let x = e.pageX - startX;
             let y = e.pageY - startY;
 
-            // Ограничиваем движение в пределах карты
             x = Math.max(-maxX, Math.min(maxX, x));
             y = Math.max(-maxY, Math.min(maxY, y));
 
@@ -366,7 +372,7 @@ $(document).ready(function() {
         isDragging = false;
     });
 
-    // Для мобильных, если нужно
+    // ===== Touch управление =====
     $map.on('touchstart', function(e) {
         isDragging = true;
         const touch = e.originalEvent.touches[0];
@@ -394,6 +400,7 @@ $(document).ready(function() {
         isDragging = false;
     });
 });
+
 
 //map4 points activation
 $('.mark3').on('click', function() {
@@ -409,9 +416,22 @@ $(document).ready(function() {
     let startX, startY;
     let currentX = 0, currentY = 0;
 
-    // Масштаб на 15%
-    let scale = 1.15;
+    // Устанавливаем масштаб в зависимости от ширины экрана
+    let windowWidth = window.innerWidth;
+    let scale;
+
+    if (windowWidth >= 1200) {
+        scale = 1.2;
+    } else if (windowWidth >= 768) {
+        scale = 1.6;
+    } else {
+        scale = 2.4;
+    }
+
+    // Устанавливаем изначальный масштаб
     $map.css('transform', `scale(${scale}) translate(0px, 0px)`);
+
+    // Пересчет размеров карты и wrapper с учетом масштаба
     let mapWidth = $map.width() * scale;
     let mapHeight = $map.height() * scale;
     let wrapperWidth = $map.parent().width();
@@ -421,6 +441,7 @@ $(document).ready(function() {
     let maxX = (mapWidth - wrapperWidth) / 2;
     let maxY = (mapHeight - wrapperHeight) / 2;
 
+    // ===== PC управление мышью =====
     $map.on('mousedown', function(e) {
         isDragging = true;
         startX = e.pageX - currentX;
@@ -448,7 +469,7 @@ $(document).ready(function() {
         isDragging = false;
     });
 
-    // Для мобильных, если нужно
+    // ===== Touch управление для мобильных =====
     $map.on('touchstart', function(e) {
         isDragging = true;
         const touch = e.originalEvent.touches[0];
@@ -476,6 +497,9 @@ $(document).ready(function() {
         isDragging = false;
     });
 });
+
+
+// graphs
 const waveData = {
   "2021": [10, 70, 30, 60],
   "2022": [60, 70, 50, 80],

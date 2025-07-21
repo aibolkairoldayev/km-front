@@ -1903,12 +1903,13 @@
         &--items {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             @media(max-width: 576px) {
                 flex-wrap: wrap;
             }
         }
         &--item {
-            height: 225px;
+            height: 230px;
             width: calc(33% - 10px);
             padding: 16px 32px;
             border-radius: 2px;
@@ -1918,6 +1919,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            margin-bottom: 18px;
             @media(max-width: 1200px) {
                 height: auto;
             }
@@ -1945,7 +1947,10 @@
                 font-size: 16px;
                 font-weight: 400;
                 line-height: normal;
-                max-width: 170px;
+                // max-width: 170px;
+            }
+            img {
+                width: 80px;
             }
         }
     }
@@ -2885,6 +2890,9 @@
         @media(max-width: 768px) {
             height: 100%;
             width: 100%;
+            top: 0;
+            left: 0;
+            padding: 16px;
         }
         @media(max-width: 576px) {
             bottom: 0;
@@ -2959,6 +2967,9 @@
             @media(max-width: 480px) {
                 font-size: 24px;
             }
+            @media(max-width: 400px) {
+                font-size: 22px;
+            }
         }
         p {
             color: #FFF;
@@ -2967,19 +2978,22 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            @media(max-width: 576px) {
+                font-size: 12px;
+            }
         }
     }
     &__mid {
         @media(max-width: 768px) {
             position: absolute;
-            bottom: 20px;
+            bottom: 16px;
             left: 16px;
         }
     }
     &__right {
         @media(max-width: 768px) {
             position: absolute;
-            bottom: 20px;
+            bottom: 16px;
             right: 16px;
         }
     }
@@ -3109,6 +3123,9 @@
         overflow: hidden;
         @media(max-width: 1200px) {
             height: auto;
+        }
+        @media(max-width: 768px) {
+            height: 550px;
         }
 
         &--bg {
