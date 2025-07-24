@@ -71,6 +71,14 @@
             line-height: normal;
             display: block;
         }
+        strong {
+            margin-bottom: 12px;
+            color: #FFF;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: normal;
+            display: block;
+        }
         p {
             color: #FFF;
             font-family: "Inter", sans-serif;
@@ -549,6 +557,9 @@
         }
         img {
             width: 100%;
+            height: 350px;
+            object-fit: cover;
+
         }
     }
     &__info {
@@ -1070,11 +1081,7 @@
         &.active {
             display: block;
         }
-        &--img {
-            img {
-                opacity: 0.7;
-            }
-        }
+
         &:first-child {
             grid-column: span 2;
             grid-row: span 2;
@@ -2546,6 +2553,17 @@
         backdrop-filter: blur(12px);
         padding: 24px;
         margin-bottom: 40px;
+        &--text {
+            p {
+                span {
+                    color: #FFF;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: normal;
+                    display: block;
+                }
+            }
+        }
         img {
             position: absolute;
             top: 24px;
@@ -2741,6 +2759,12 @@
             font-size: 16px;
             font-weight: 400;
             line-height: normal;
+            span {
+                color: #FFF;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+            }
         }
     }
     &__mid {
@@ -2752,6 +2776,8 @@
         img {
             width: 49%;
             height: 100%;
+            max-height: 330px;
+            object-fit: cover;
             @media(max-width: 768px) {
                 width: 100%;
                 margin-bottom: 20px;
@@ -3225,7 +3251,7 @@
     &__item {
         height: 285px;
         position: relative;
-        width: 33%;
+        width: 32%;
         @media(max-width: 768px) {
             width: 100%;
             margin-bottom: 16px;

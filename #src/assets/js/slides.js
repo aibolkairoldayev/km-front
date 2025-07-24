@@ -5,6 +5,7 @@ $('.history__slider').slick({
     infinite: false,
     dots: false,
     arrows: false,
+    swipeToSlide: true,
     responsive: [
         {
             breakpoint: 992,
