@@ -99,11 +99,12 @@
             display: flex;
             flex-direction: column;
             
-            background: rgba(0, 0, 0, .06);
+            background: rgba(0, 0, 0, .2);
             border-radius: 8px;
             max-height: 0;
             overflow-y: hidden;
             transition: .2 linear;
+            backdrop-filter: blur(3px);
             &.active {
                 max-height: 100px;
                 padding: 4px;

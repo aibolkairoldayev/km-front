@@ -280,13 +280,15 @@ body::-webkit-scrollbar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: rgba(0, 0, 0, 0.06);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   max-height: 0;
   overflow-y: hidden;
   -webkit-transition: 0.2 linear;
   -o-transition: 0.2 linear;
   transition: 0.2 linear;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .header__lang--other.active {
