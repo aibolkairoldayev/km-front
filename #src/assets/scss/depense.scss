@@ -508,7 +508,7 @@
 
 .modal2 {
     z-index: 600;
-     display: none;
+    display: none;
         &.show {
             display: block;
         }
@@ -623,6 +623,15 @@
                     font-weight: 400;
                     line-height: 120%;
                     list-style-type: disc;
+                }
+            }
+            ol {
+                li {
+                    color: #FFF;
+                    font-family: "Inter", sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 120%;
                 }
             }
         }
