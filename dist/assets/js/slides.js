@@ -36,6 +36,7 @@ $('.standart__slider').slick({
     infinite: false,
     dots: false,
     arrows: false,
+    swipeToSlide: true,
     responsive: [
          {
             breakpoint: 1200,

@@ -176,11 +176,34 @@ $(document).ready(function () {
 });
 
 
+$(document).ready(function () {
+let url = location.href;
+    let hash = url.substring(url.indexOf('#') + 1); // '#foo'
+    let targetBlock = $('#' + hash); // соответствующий блок
+    if (targetBlock.length) {
+        let headerOffset;
+
+        if ($(window).width() > 768) {
+            headerOffset = 70;
+        } else {
+            headerOffset = 85;
+        }
+        // фиксированный отступ от верха
+        const targetPosition = targetBlock.offset().top - headerOffset;
+
+        $('html, body').scrollTop(targetPosition);
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth' // мгновенно
+        });
+    }
+});
 
 //main tab links func
 $(document).ready(function () {
   $('.tab-link').on('click', function (e) {
     e.preventDefault();
+    console.log('ssbn');
 
     const index = $('.tab-link').index(this); // индекс кликнутой табы
     const target = $('.tab-destiny').eq(index); // соответствующий блок
@@ -406,6 +429,7 @@ $(document).ready(function() {
 $('.mark3').on('click', function() {
     let index = $('.mark3').index(this);
     $('.social__info').removeClass('active').eq(index).addClass('active');
+    $('.mark3').removeClass('active').eq(index).addClass('active');
 });
 
 

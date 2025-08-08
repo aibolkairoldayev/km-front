@@ -4990,7 +4990,7 @@
   cursor: pointer;
 }
 
-.mark3 circle {
+.mark3.active circle {
   -webkit-animation: blink 1s infinite alternate;
           animation: blink 1s infinite alternate;
   -webkit-transform-origin: center;

@@ -4946,11 +4946,13 @@
 
 .mark3  {
     cursor: pointer;
-    circle {
-        animation: blink 1s infinite alternate;
-        transform-origin: center;
-        
-    }   
+ 
+    &.active {
+        circle {
+            animation: blink 1s infinite alternate;
+            transform-origin: center;
+        }
+    } 
     &.mark-yel {
         circle {
             stroke: #FFD700;
