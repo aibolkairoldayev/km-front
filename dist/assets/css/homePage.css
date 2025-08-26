@@ -1094,7 +1094,7 @@
 
 .news__item--info {
   height: 108px;
-  padding: 24px;
+  padding: 24px 50px 24px 24px;
   overflow-y: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1412,6 +1412,10 @@
 
   .news__item:first-child .news__item--info b {
     font-size: 20px;
+  }
+
+  .news__item--info {
+    padding: 20px 35px 20px 20px;
   }
 }
 

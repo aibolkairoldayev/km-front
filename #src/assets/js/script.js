@@ -524,29 +524,26 @@ $(document).ready(function() {
 
 
 // graphs
-const waveData = {
-  "2021": [10, 70, 30, 60],
-  "2022": [60, 70, 50, 80],
-  "2023": [80, 60, 35, 55],
-  "2024": [55, 40, 70, 50],
-  "2025": [50, 65, 45, 70]
-};
+$(document).ready(function() {
+    let graphYear = $('.graph .year');
+    if (graphYear.length > 0) {
+        graphYear.each(function () {
+            const points = $(this).data('percents')
+            const w = $(this).width();
+            const h = $(this).height();
+            const stepX = w / 3;
 
-$('.year').each(function(){
-  const year = $(this).data('year');
-  const points = waveData[year];
-  const w = $(this).width();
-  const h = $(this).height();
-  const stepX = w / 3;
-
-  let polyPoints = `0,${h} `;
-  points.forEach((p, i) => {
-    const x = i * stepX;
-    const y = h - (p/100 * h);
-    polyPoints += `${x},${y} `;
-  });
-  polyPoints += `${w},${h}`;
-  $(this).find('polygon').attr('points', polyPoints).attr('fill', 'url(#grad)');
+            let polyPoints = `0,${h} `;
+            points.forEach((p, i) => {
+                const x = i * stepX;
+                const y = h - (p / 100 * h);
+                polyPoints += `${x},${y} `;
+            });
+            polyPoints += `${w},${h}`;
+            $(this).find('svg').attr('viewBox', '0 0 '+ w +' '+ h);
+            $(this).find('polygon').attr('points', polyPoints).attr('fill', 'url(#grad)');
+        });
+    }
 });
 
 // number increase animation

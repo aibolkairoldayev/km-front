@@ -929,7 +929,7 @@ body::-webkit-scrollbar {
 
 .otherprod__item--info {
   height: 80px;
-  padding: 24px;
+  padding: 24px 50px 24px 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1179,6 +1179,10 @@ body::-webkit-scrollbar {
 
   .otherprod__item {
     height: 310px;
+  }
+
+  .otherprod__item--info {
+    padding: 20px 35px 20px 20px;
   }
 }
 

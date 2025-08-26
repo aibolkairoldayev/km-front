@@ -1111,11 +1111,14 @@
         }
         &--info {
             height: 108px;
-            padding: 24px;
+            padding: 24px 50px 24px 24px;
             overflow-y: hidden;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            @media(max-width: 576px) {
+                padding: 20px 35px 20px 20px;
+            }
             b {
                 display: block;
                 color: #FFF;
