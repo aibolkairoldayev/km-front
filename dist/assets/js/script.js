@@ -1,93 +1,93 @@
 //prelouder and main page animation
 function animateIntroItems() {
-  $('.intro__item').each(function(index) {
-    setTimeout(() => {
-      $(this).addClass('show');
-    }, index * 400); // каждая следующая с задержкой 400мс
-  });
+    $('.intro__item').each(function(index) {
+        setTimeout(() => {
+            $(this).addClass('show');
+        }, index * 400); // каждая следующая с задержкой 400мс
+    });
 }
 
 function hidePreloaderAndAnimate() {
-  $('.preloader').fadeOut('slow', function() {
-    $(this).remove();
-    animateIntroItems(); // запуск анимации после удаления прелоудера
-  });
+    $('.preloader').fadeOut('slow', function() {
+        $(this).remove();
+        animateIntroItems(); // запуск анимации после удаления прелоудера
+    });
 }
 
 $(document).ready(() => {
-  // двойной вызов, чтобы гарантированно сработало:
-  hidePreloaderAndAnimate();
-  setTimeout(hidePreloaderAndAnimate, 3000);
+    // двойной вызов, чтобы гарантированно сработало:
+    hidePreloaderAndAnimate();
+    setTimeout(hidePreloaderAndAnimate, 3000);
 });
 
 
 //scrollbar in docs main page
 $(function () {
-  const $slider = $('.asbest__docs');
-  let isDown = false;
-  let startX = 0;
-  let scrollLeft = 0;
+    const $slider = $('.asbest__docs');
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
 
-  $slider.on('mousedown', function (e) {
-    isDown = true;
-    startX = e.pageX;
-    scrollLeft = this.scrollLeft;
-    // Отключаем выделение текста
-    $(this).addClass('no-select');
-  });
+    $slider.on('mousedown', function (e) {
+        isDown = true;
+        startX = e.pageX;
+        scrollLeft = this.scrollLeft;
+        // Отключаем выделение текста
+        $(this).addClass('no-select');
+    });
 
-  $(document).on('mouseup', function () {
-    isDown = false;
-    $slider.removeClass('no-select');
-  });
+    $(document).on('mouseup', function () {
+        isDown = false;
+        $slider.removeClass('no-select');
+    });
 
-  $(document).on('mousemove', function (e) {
-    if (!isDown) return;
-    const x = e.pageX;
-    const walk = (x - startX) * 1.5; // Чувствительность
-    $slider[0].scrollLeft = scrollLeft - walk;
-  });
+    $(document).on('mousemove', function (e) {
+        if (!isDown) return;
+        const x = e.pageX;
+        const walk = (x - startX) * 1.5; // Чувствительность
+        $slider[0].scrollLeft = scrollLeft - walk;
+    });
 });
 
 //tab in main page
 $(function () {
-  $('.asbest__tab').on('click', function () {
-    const index = $(this).index('.asbest__tab');
+    $('.asbest__tab').on('click', function () {
+        const index = $(this).index('.asbest__tab');
 
-    // Если уже активный — ничего не делаем
-    if ($(this).hasClass('active')) return;
+        // Если уже активный — ничего не делаем
+        if ($(this).hasClass('active')) return;
 
-    // Снимаем .active со всех табов и контента
-    $('.asbest__tab').removeClass('active');
-    $('.asbest__content').removeClass('active');
+        // Снимаем .active со всех табов и контента
+        $('.asbest__tab').removeClass('active');
+        $('.asbest__content').removeClass('active');
 
-    // Назначаем .active текущим по индексу
-    $('.asbest__tab').eq(index).addClass('active');
-    $('.asbest__content').eq(index).addClass('active');
-  });
+        // Назначаем .active текущим по индексу
+        $('.asbest__tab').eq(index).addClass('active');
+        $('.asbest__content').eq(index).addClass('active');
+    });
 });
 
 //lang open/close
 $(document).ready(function() {
-  // Открытие/закрытие дропдауна по клику на текущий язык
-  $('.header__lang--current').on('click', function(e) {
-    e.stopPropagation();
-    $('.header__lang--other').toggleClass('active');
-  });
+    // Открытие/закрытие дропдауна по клику на текущий язык
+    $('.header__lang--current').on('click', function(e) {
+        e.stopPropagation();
+        $('.header__lang--other').toggleClass('active');
+    });
 
-  // Закрытие дропдауна при клике на элемент языка
-  $('.header__lang--item').on('click', function() {
-    if (!$(this).hasClass('active')) {
-      $('.header__lang--other').removeClass('active');
-    }
-  });
+    // Закрытие дропдауна при клике на элемент языка
+    $('.header__lang--item').on('click', function() {
+        if (!$(this).hasClass('active')) {
+            $('.header__lang--other').removeClass('active');
+        }
+    });
 
-  // Закрытие при клике вне дропдауна
-  $(document).on('click', function(e) {
-    if (!$(e.target).closest('.header__lang').length) {
-      $('.header__lang--other').removeClass('active');
-    }
-  });
+    // Закрытие при клике вне дропдауна
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.header__lang').length) {
+            $('.header__lang--other').removeClass('active');
+        }
+    });
 });
 
 
@@ -98,38 +98,38 @@ $('.burger__lang--current').click(()=> {
 
 // header fixed on scroll
 $(window).on('scroll', function () {
-  if (!$('.burger').hasClass('open')) { // если бургер закрыт
-    if ($(window).scrollTop() > 0) {
-      $('.header').addClass('fixed');
+    if (!$('.burger').hasClass('open')) { // если бургер закрыт
+        if ($(window).scrollTop() > 0) {
+            $('.header').addClass('fixed');
+        } else {
+            $('.header').removeClass('fixed');
+        }
     } else {
-      $('.header').removeClass('fixed');
+        $('.header').addClass('fixed'); // при открытом бургере фикс всегда
     }
-  } else {
-    $('.header').addClass('fixed'); // при открытом бургере фикс всегда
-  }
 });
 
 // burger open/close
 function toggleBurger() {
-  $('.burger').toggleClass('open');
-  $('.burger__btn').toggleClass('open');
+    $('.burger').toggleClass('open');
+    $('.burger__btn').toggleClass('open');
 
-  if ($('.burger').hasClass('open')) {
-    $('body').css('overflow', 'hidden');
-    $('.header').addClass('fixed'); // фиксируем хедер при открытии
-  } else {
-    $('body').css('overflow', '');
+    if ($('.burger').hasClass('open')) {
+        $('body').css('overflow', 'hidden');
+        $('.header').addClass('fixed'); // фиксируем хедер при открытии
+    } else {
+        $('body').css('overflow', '');
 
-    // если вверху страницы, убираем fixed
-    if ($(window).scrollTop() === 0) {
-      $('.header').removeClass('fixed');
+        // если вверху страницы, убираем fixed
+        if ($(window).scrollTop() === 0) {
+            $('.header').removeClass('fixed');
+        }
+        // если не вверху, оставляем fixed
     }
-    // если не вверху, оставляем fixed
-  }
 }
 
 $('.burger__wrapper').click(() => {
-  toggleBurger();
+    toggleBurger();
 });
 
 //container left margin
@@ -158,26 +158,26 @@ if ($('.about__video').length) {
 
 //about page persons modal open/close
 $(document).ready(function () {
-  // Открытие модального окна
-  $('.corporate__item--info').on('click', function () {
-    const index = $('.corporate__item--info').index(this); // Получаем индекс кликнутого элемента
+    // Открытие модального окна
+    $('.corporate__item--info').on('click', function () {
+        const index = $('.corporate__item--info').index(this); // Получаем индекс кликнутого элемента
 
-    $('.modal2').addClass('show'); // Показываем модалку
+        $('.modal2').addClass('show'); // Показываем модалку
 
-    // Активируем соответствующий modal2__item
-    $('.modal2__item').removeClass('active').eq(index).addClass('active');
-  });
+        // Активируем соответствующий modal2__item
+        $('.modal2__item').removeClass('active').eq(index).addClass('active');
+    });
 
-  // Закрытие модального окна при клике на modal2__close или modal2__wrapper
-  $('.modal2__close, .modal2__wrapper').on('click', function () {
-    $('.modal2').removeClass('show'); // Скрываем модалку
-    $('.modal2__item').removeClass('active'); // Убираем активный класс
-  });
+    // Закрытие модального окна при клике на modal2__close или modal2__wrapper
+    $('.modal2__close, .modal2__wrapper').on('click', function () {
+        $('.modal2').removeClass('show'); // Скрываем модалку
+        $('.modal2__item').removeClass('active'); // Убираем активный класс
+    });
 });
 
 
 $(document).ready(function () {
-let url = location.href;
+    let url = location.href;
     let hash = url.substring(url.indexOf('#') + 1); // '#foo'
     let targetBlock = $('#' + hash); // соответствующий блок
     if (targetBlock.length) {
@@ -201,54 +201,54 @@ let url = location.href;
 
 //main tab links func
 $(document).ready(function () {
-  $('.tab-link').on('click', function (e) {
-    e.preventDefault();
-    console.log('ssbn');
+    $('.tab-link').on('click', function (e) {
+        e.preventDefault();
+        console.log('ssbn');
 
-    const index = $('.tab-link').index(this); // индекс кликнутой табы
-    const target = $('.tab-destiny').eq(index); // соответствующий блок
+        const index = $('.tab-link').index(this); // индекс кликнутой табы
+        const target = $('.tab-destiny').eq(index); // соответствующий блок
 
-    if (target.length) {
-     let headerOffset;
+        if (target.length) {
+            let headerOffset;
 
-      if ($(window).width() > 768) {
-        headerOffset = 70;
-      } else {
-        headerOffset = 85;
-      }
-       // фиксированный отступ от верха
-      const targetPosition = target.offset().top - headerOffset;
+            if ($(window).width() > 768) {
+                headerOffset = 70;
+            } else {
+                headerOffset = 85;
+            }
+            // фиксированный отступ от верха
+            const targetPosition = target.offset().top - headerOffset;
 
-      $('html, body').scrollTop(targetPosition);
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth' // мгновенно
-      });
-    }
-  });
+            $('html, body').scrollTop(targetPosition);
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth' // мгновенно
+            });
+        }
+    });
 });
 
 //news page tabs func
 $(document).on('click', '.news2__tab', function () {
-  const selectedCat = $(this).data('cat');
+    const selectedCat = $(this).data('cat');
 
-  // 1. Активируем нужный таб
-  $('.news2__tab').removeClass('active');
-  $(this).addClass('active');
+    // 1. Активируем нужный таб
+    $('.news2__tab').removeClass('active');
+    $(this).addClass('active');
 
-  // 2. Показываем / скрываем элементы в зависимости от выбранного data-cat
-  if (selectedCat === 'all') {
-    $('.news2__item').addClass('active');
-  } else {
-    $('.news2__item').each(function () {
-      const itemCat = $(this).data('item');
-      if (itemCat === selectedCat) {
-        $(this).addClass('active');
-      } else {
-        $(this).removeClass('active');
-      }
-    });
-  }
+    // 2. Показываем / скрываем элементы в зависимости от выбранного data-cat
+    if (selectedCat === 'all') {
+        $('.news2__item').addClass('active');
+    } else {
+        $('.news2__item').each(function () {
+            const itemCat = $(this).data('item');
+            if (itemCat === selectedCat) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    }
 });
 
 
@@ -313,21 +313,21 @@ $(function(){
 
 // to up btn func
 $(document).ready(function () {
-  const $ups = $('.ups');
+    const $ups = $('.ups');
 
-  // Отслеживание скролла
-  $(window).on('scroll', function () {
-    if ($(this).scrollTop() > 500) {
-      $ups.addClass('show');
-    } else {
-      $ups.removeClass('show');
-    }
-  });
+    // Отслеживание скролла
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 500) {
+            $ups.addClass('show');
+        } else {
+            $ups.removeClass('show');
+        }
+    });
 
-  // Клик по кнопке для плавного возврата к верху
-  $ups.on('click', function () {
-    $('html, body').animate({ scrollTop: 0 }, 500); // 500 = скорость в мс
-  });
+    // Клик по кнопке для плавного возврата к верху
+    $ups.on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 500); // 500 = скорость в мс
+    });
 });
 
 // open/close modal
@@ -341,6 +341,18 @@ function closeModal1() {
 }
 $('.modal1__wrapper').click(()=> {
     closeModal1()
+})
+
+function openModal3() {
+    $('.modal3').addClass('open');
+    $('body').css('overflow', 'hidden');
+}
+function closeModal3() {
+    $('.modal3').removeClass('open');
+    $('body').css('overflow', 'unset');
+}
+$('.modal3__wrapper').click(()=> {
+    closeModal3()
 })
 
 //develop page map moving

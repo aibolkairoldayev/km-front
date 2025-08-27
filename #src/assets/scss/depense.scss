@@ -5218,3 +5218,103 @@ svg {
     font-weight: 700;
     line-height: normal;
 }
+
+.seos {
+    margin: 40px 0;
+    @media (max-width: 576px) {
+        margin: 24px 0;
+    }
+    &__content {
+        p {
+            color: #fff;
+            font-size: 20px;
+        }
+        span {
+            color: #fff;
+            font-size: 20px;
+        }
+        b {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        strong {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+            li {
+                color: #fff;
+                font-size: 20px;
+                list-style-type: inherit;
+                margin-bottom: 12px;
+            }
+        }
+        ul {
+            padding-left: 20px;
+            list-style-type: decimal;
+            li {
+                color: #fff;
+                font-size: 20px;
+                list-style-type: inherit;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+.modal3 {
+    &__content {
+        width: 670px;
+        background: linear-gradient(90deg, #1753A9 0%, #0158D5 100%), #001636;
+        @media (max-width: 768px) {
+            width: 90%;
+        }
+    }
+    &__inner {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items:  center;
+        svg {
+            width: 120px;
+        }
+    }
+    &__title {
+        color: #FFF;
+        text-align: center;
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.864px;
+        text-transform: uppercase;
+        margin: 16px 0 40px;
+        @media (max-width: 992px) {
+            font-size: 60px;
+        }
+        @media (max-width: 576px) {
+            font-size: 48px;
+        }
+    }
+    &__btn {
+        border-radius: 2px;
+        background: #07316E;
+        width: 430px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+    }
+}
