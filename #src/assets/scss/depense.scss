@@ -5229,6 +5229,10 @@ svg {
             color: #fff;
             font-size: 20px;
         }
+        em {
+            color: #fff;
+            font-size: 20px; 
+        }
         span {
             color: #fff;
             font-size: 20px;
@@ -5253,7 +5257,7 @@ svg {
                 margin-bottom: 12px;
             }
         }
-        ul {
+        ol {
             padding-left: 20px;
             list-style-type: decimal;
             li {
@@ -5317,4 +5321,8 @@ svg {
             width: 100%;
         }
     }
+}
+
+.container3 {
+    padding-top: 50px;
 }

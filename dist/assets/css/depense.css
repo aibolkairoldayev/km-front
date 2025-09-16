@@ -5230,6 +5230,11 @@ svg {
   font-size: 20px;
 }
 
+.seos__content em {
+  color: #fff;
+  font-size: 20px;
+}
+
 .seos__content span {
   color: #fff;
   font-size: 20px;
@@ -5259,12 +5264,12 @@ svg {
   margin-bottom: 12px;
 }
 
-.seos__content ul {
+.seos__content ol {
   padding-left: 20px;
   list-style-type: decimal;
 }
 
-.seos__content ul li {
+.seos__content ol li {
   color: #fff;
   font-size: 20px;
   list-style-type: inherit;
@@ -5327,6 +5332,10 @@ svg {
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
+}
+
+.container3 {
+  padding-top: 50px;
 }
 
 @media (max-width: 1400px) {
