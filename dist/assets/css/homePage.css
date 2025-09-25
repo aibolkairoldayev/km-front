@@ -1236,6 +1236,10 @@
     height: auto;
     margin-bottom: 16px;
   }
+
+  .news__item--img img {
+    max-height: 430px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1416,6 +1420,10 @@
 
   .news__item--info {
     padding: 20px 35px 20px 20px;
+  }
+
+  .news__item--img img {
+    max-height: 450px;
   }
 }
 

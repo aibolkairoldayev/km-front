@@ -3558,7 +3558,7 @@
 }
 
 .new__info {
-  padding: 24px;
+  padding: 24px 60px 24px 24px;
   height: 110px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5459,6 +5459,7 @@ svg {
 
   .secure__content {
     padding: 24px 40px 24px 150px;
+    height: auto;
   }
 
   .secure__doc {
@@ -5534,6 +5535,14 @@ svg {
 
   .banner4__content b {
     font-size: 64px;
+  }
+
+  .recrut__item1 .recrut__graduate {
+    display: none;
+  }
+
+  .recrut__img {
+    display: none;
   }
 
   .recrut__app b {
@@ -5692,7 +5701,6 @@ svg {
   }
 
   .secure__content {
-    height: auto;
     padding: 24px;
   }
 
@@ -5940,14 +5948,6 @@ svg {
 
   .career__right {
     width: 100%;
-  }
-
-  .recrut__item1 .recrut__graduate {
-    display: none;
-  }
-
-  .recrut__img {
-    display: none;
   }
 
   .recrut__app {
@@ -6756,6 +6756,10 @@ svg {
   .consum__marker::after {
     -webkit-animation: markersAfterMobile 3s infinite linear;
     animation: markersAfterMobile 3s infinite linear;
+  }
+
+  .consum__title {
+    padding: 0 15px;
   }
 
   .consum__world--text {

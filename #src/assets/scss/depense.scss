@@ -1426,9 +1426,10 @@
         backdrop-filter: blur(12px);
         @media(max-width: 1200px) {
             padding: 24px 40px 24px 150px;
+            height: auto;
         }
         @media(max-width: 992px) {
-            height: auto;
+            
             padding: 24px;
         }
     }
@@ -2363,6 +2364,9 @@
         font-size: 32px;
         font-weight: 700;
         line-height: normal;
+        @media(max-width: 576px) {
+            padding: 0 15px;
+        }
     }
     &__map {
         height: 540px;
@@ -3634,7 +3638,7 @@
         }
     }
     &__info {
-        padding: 24px;
+        padding: 24px 60px 24px 24px;
         height: 110px;
         display: flex;
         flex-direction: column;
@@ -4013,7 +4017,7 @@
                 position: absolute;
                 top: 24px;
                 right: 22%;
-                @media(max-width: 992px) {
+                @media(max-width: 1200px) {
                     display: none;
                 }
                 b {
@@ -4073,7 +4077,7 @@
     &__img {
         position: absolute;
         bottom: 0;
-        @media(max-width: 992px) {
+        @media(max-width: 1200px) {
             display: none;
         }
     }
