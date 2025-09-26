@@ -739,6 +739,8 @@ body::-webkit-scrollbar {
 
 .main-banner__left img {
   height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .main-banner__right {
@@ -962,11 +964,6 @@ body::-webkit-scrollbar {
 
   .header__nav ul li {
     padding: 12px;
-  }
-
-  .main-banner__left img {
-    -o-object-fit: contain;
-       object-fit: contain;
   }
 }
 

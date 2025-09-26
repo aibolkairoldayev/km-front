@@ -1028,6 +1028,7 @@
         img {
             width: 230px;
             height: auto;
+            opacity: 0.5;
         }
         
     }
@@ -2355,6 +2356,9 @@
     &__content {
         width: calc(100% - 326px);
         margin-left: auto;
+        @media(max-width: 1400px) {
+            width: calc(100% - 250px);
+        }
         @media(max-width: 992px) {
             width: 100%;
         }
@@ -3438,6 +3442,7 @@
         img {
             width: 230px;
             height: auto;
+            opacity: 0.5;
         }
     }
     &__content {
@@ -3529,6 +3534,12 @@
             font-weight: 700;
             line-height: normal;
             margin-bottom: 16px;
+        }
+        img {
+            @media(max-width: 576px) {
+                width: 100%;
+                height: auto;
+            }
         }
     }
     ol {
@@ -3668,8 +3679,12 @@
                 @media(max-width: 1200px) {
                     height: 150px;
                 }
+                @media(max-width: 992px) {
+                    overflow: hidden;
+                }
                 @media(max-width: 768px) {
                     height: auto;
+                    overflow: unset;
                 }
             }
         }

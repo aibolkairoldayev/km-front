@@ -114,6 +114,9 @@
         z-index: 101;
         width: 240px;
         height: 240px;
+        img {
+            opacity: 0.5;
+        }
         @media(max-width: 576px) {
             display: none;
         }
@@ -960,6 +963,9 @@
         z-index: 101;
         width: 240px;
         height: 240px;
+        img {
+            opacity: 0.5;
+        }
         @media(max-width: 576px) {
             display: none;
         }
