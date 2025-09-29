@@ -203,30 +203,28 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.tab-link').on('click', function (e) {
         e.preventDefault();
-        console.log('ssbn');
 
-        const index = $('.tab-link').index(this); // индекс кликнутой табы
-        const target = $('.tab-destiny').eq(index); // соответствующий блок
+        const index = $('.tab-link').index(this);           // индекс кликнутой табы
+        const target = $('.tab-destiny').eq(index);         // соответствующий блок
 
         if (target.length) {
-            let headerOffset;
+            // ищем вложенный элемент .tab-destiny2
+            const inner = target.find('.tab-destiny2').first();
+            const scrollTarget = inner.length ? inner : target;
 
-            if ($(window).width() > 768) {
-                headerOffset = 70;
-            } else {
-                headerOffset = 85;
-            }
             // фиксированный отступ от верха
-            const targetPosition = target.offset().top - headerOffset;
+            const headerOffset = $(window).width() > 768 ? 140 : 130;
+            const targetPosition = scrollTarget.offset().top - headerOffset;
 
-            $('html, body').scrollTop(targetPosition);
+            // плавная прокрутка
             window.scrollTo({
                 top: targetPosition,
-                behavior: 'smooth' // мгновенно
+                behavior: 'smooth'
             });
         }
     });
 });
+
 
 //news page tabs func
 $(document).on('click', '.news2__tab', function () {
